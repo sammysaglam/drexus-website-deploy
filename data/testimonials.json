@@ -1,0 +1,198 @@
+{
+  "testimonials": [
+    {
+      "id": "1",
+      "author": {
+        "name": "Sarah Chen",
+        "title": "CEO & Founder",
+        "company": "PayFlow Technologies",
+        "avatar": "/images/testimonials/sarah-chen.jpg",
+        "linkedin": "https://linkedin.com/in/sarahchen"
+      },
+      "quote": "Drexus didn't just build our product—they built our engineering culture. Their team became our team, and that foundation enabled us to scale from 0 to $2M ARR in 18 months.",
+      "role": "founder",
+      "industry": "fintech",
+      "useCase": "mvp-development",
+      "featured": true,
+      "metrics": {
+        "timeline": "6 months",
+        "outcome": "$15M Series A"
+      }
+    },
+    {
+      "id": "2",
+      "author": {
+        "name": "Marcus Johnson",
+        "title": "VP of E-commerce",
+        "company": "StyleHub",
+        "avatar": "/images/testimonials/marcus-johnson.jpg"
+      },
+      "quote": "In 90 days, Drexus delivered more impact than our previous agency did in 2 years. They didn't just optimize—they taught us how to think about optimization.",
+      "role": "ops",
+      "industry": "ecommerce",
+      "useCase": "conversion-optimization",
+      "featured": true,
+      "metrics": {
+        "timeline": "90 days",
+        "outcome": "3x conversion rate"
+      }
+    },
+    {
+      "id": "3",
+      "author": {
+        "name": "Alex Kumar",
+        "title": "CTO",
+        "company": "DataSync Pro",
+        "avatar": "/images/testimonials/alex-kumar.jpg",
+        "linkedin": "https://linkedin.com/in/alexkumar"
+      },
+      "quote": "Drexus managed the impossible—rebuilding our plane while flying it. Zero downtime, zero data loss, and our customers actually noticed the performance improvements.",
+      "role": "cto",
+      "industry": "saas",
+      "useCase": "platform-modernization",
+      "featured": true,
+      "metrics": {
+        "timeline": "9 months",
+        "outcome": "10x capacity"
+      }
+    },
+    {
+      "id": "4",
+      "author": {
+        "name": "Jennifer Liu",
+        "title": "Product Manager",
+        "company": "TechCorp",
+        "avatar": "/images/testimonials/jennifer-liu.jpg"
+      },
+      "quote": "The MVP scope builder helped us cut our feature list by 60% while keeping everything that mattered. We launched 2 months early and users loved it.",
+      "role": "product",
+      "industry": "technology",
+      "useCase": "product-strategy",
+      "featured": false
+    },
+    {
+      "id": "5",
+      "author": {
+        "name": "Dr. Rachel Martinez",
+        "title": "Chief Medical Officer",
+        "company": "MedConnect",
+        "avatar": "/images/testimonials/rachel-martinez.jpg"
+      },
+      "quote": "Drexus understood healthcare isn't just about code—it's about compliance, security, and trust. They delivered all three in record time.",
+      "role": "executive",
+      "industry": "healthcare",
+      "useCase": "compliance",
+      "featured": false,
+      "metrics": {
+        "timeline": "16 weeks",
+        "outcome": "HIPAA compliant"
+      }
+    },
+    {
+      "id": "6",
+      "author": {
+        "name": "Michael Roberts",
+        "title": "Head of Engineering",
+        "company": "ScaleUp Inc",
+        "avatar": "/images/testimonials/michael-roberts.jpg"
+      },
+      "quote": "We were drowning in technical debt. Drexus helped us pay it down systematically while shipping new features faster than ever.",
+      "role": "product-lead",
+      "industry": "saas",
+      "useCase": "technical-debt",
+      "featured": false
+    },
+    {
+      "id": "7",
+      "author": {
+        "name": "Lisa Park",
+        "title": "COO",
+        "company": "RetailNext",
+        "avatar": "/images/testimonials/lisa-park.jpg"
+      },
+      "quote": "The experiments framework transformed how we make decisions. We went from guessing to knowing, and our conversion rate reflects that.",
+      "role": "ops",
+      "industry": "retail",
+      "useCase": "experimentation",
+      "featured": false,
+      "metrics": {
+        "outcome": "4 experiments/month"
+      }
+    },
+    {
+      "id": "8",
+      "author": {
+        "name": "David Chen",
+        "title": "Founder & CEO",
+        "company": "CloudBase",
+        "avatar": "/images/testimonials/david-chen.jpg",
+        "linkedin": "https://linkedin.com/in/davidchen"
+      },
+      "quote": "Drexus helped us avoid the classic founder mistakes. Their frameworks saved us months of wrong turns and probably saved the company.",
+      "role": "founder",
+      "industry": "technology",
+      "useCase": "startup-advisory",
+      "featured": true
+    },
+    {
+      "id": "9",
+      "author": {
+        "name": "Amanda Foster",
+        "title": "VP Product",
+        "company": "FinanceFlow",
+        "avatar": "/images/testimonials/amanda-foster.jpg"
+      },
+      "quote": "The risk ledger tool became our single source of truth. It turned chaotic status meetings into focused problem-solving sessions.",
+      "role": "product-lead",
+      "industry": "fintech",
+      "useCase": "project-management",
+      "featured": false
+    },
+    {
+      "id": "10",
+      "author": {
+        "name": "Dr. James Liu",
+        "title": "Founder & CEO",
+        "company": "NeuralFlow AI",
+        "avatar": "/images/testimonials/james-liu.jpg"
+      },
+      "quote": "Drexus turned our biggest weakness into our competitive advantage. Our infrastructure costs are now 10x lower than competitors while being 100x faster.",
+      "role": "founder",
+      "industry": "ai-ml",
+      "useCase": "infrastructure",
+      "featured": true,
+      "metrics": {
+        "timeline": "3 months",
+        "outcome": "70% cost reduction"
+      }
+    },
+    {
+      "id": "11",
+      "author": {
+        "name": "Robert Kim",
+        "title": "CTO",
+        "company": "LogisticsPlus",
+        "avatar": "/images/testimonials/robert-kim.jpg"
+      },
+      "quote": "The vendor scorecard saved us from a disaster. We were about to sign with a vendor that looked great on paper but failed the technical diligence.",
+      "role": "cto",
+      "industry": "logistics",
+      "useCase": "vendor-selection",
+      "featured": false
+    },
+    {
+      "id": "12",
+      "author": {
+        "name": "Emily Zhang",
+        "title": "Director of Operations",
+        "company": "EduTech Pro",
+        "avatar": "/images/testimonials/emily-zhang.jpg"
+      },
+      "quote": "Drexus's latency budget framework gave us a common language with engineering. We finally understood why some features were 'expensive' and could make informed tradeoffs.",
+      "role": "ops",
+      "industry": "education",
+      "useCase": "performance",
+      "featured": false
+    }
+  ]
+}

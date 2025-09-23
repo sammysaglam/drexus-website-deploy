@@ -1,0 +1,93 @@
+{
+  "leadership": [
+    {
+      "id": "thomas-mueller",
+      "name": "Thomas Müller",
+      "title": "CEO & Co-founder",
+      "photo": "/images/leadership/thomas-mueller.jpg",
+      "linkedin": "https://linkedin.com/in/thomasmueller",
+      "bio": "Thomas co-founded Drexus after experiencing firsthand the challenges of scaling engineering teams at high-growth startups. Previously, he was VP of Engineering at CloudScale (acquired by SAP) and founded two successful B2B SaaS companies.",
+      "expertise": ["Strategic Leadership", "Enterprise Sales", "Startup Scaling"],
+      "education": "MSc Computer Science, ETH Zurich",
+      "order": 1
+    },
+    {
+      "id": "sarah-chen",
+      "name": "Sarah Chen",
+      "title": "COO & Co-founder",
+      "photo": "/images/leadership/sarah-chen.jpg",
+      "linkedin": "https://linkedin.com/in/sarahchen",
+      "bio": "Sarah brings 15+ years of operational excellence from McKinsey and Google. She's passionate about building high-performing teams and has scaled operations at three unicorn startups. At Drexus, she ensures we deliver consistent excellence across all client engagements.",
+      "expertise": ["Operations", "Team Building", "Process Optimization"],
+      "education": "MBA, INSEAD; BA Economics, Stanford",
+      "order": 2
+    },
+    {
+      "id": "david-kumar",
+      "name": "David Kumar",
+      "title": "CTO",
+      "photo": "/images/leadership/david-kumar.jpg",
+      "linkedin": "https://linkedin.com/in/davidkumar",
+      "bio": "David is a technology leader with 20+ years building enterprise software. Former VP Engineering at Salesforce, he's architected systems processing billions of transactions. He ensures Drexus stays at the cutting edge of technology while maintaining enterprise-grade reliability.",
+      "expertise": ["System Architecture", "Cloud Infrastructure", "Security"],
+      "education": "PhD Computer Science, MIT",
+      "order": 3
+    },
+    {
+      "id": "maria-rodriguez",
+      "name": "Maria Rodriguez",
+      "title": "VP of Engineering",
+      "photo": "/images/leadership/maria-rodriguez.jpg",
+      "linkedin": "https://linkedin.com/in/mariarodriguez",
+      "bio": "Maria leads our engineering teams with a focus on technical excellence and mentorship. With experience at Amazon and Netflix, she's built products used by millions. She champions our culture of continuous learning and innovation.",
+      "expertise": ["Full-Stack Development", "Team Leadership", "Agile Methodologies"],
+      "education": "MSc Software Engineering, TU Munich",
+      "order": 4
+    },
+    {
+      "id": "alex-wong",
+      "name": "Alex Wong",
+      "title": "VP of Product",
+      "photo": "/images/leadership/alex-wong.jpg",
+      "linkedin": "https://linkedin.com/in/alexwong",
+      "bio": "Alex shapes product strategy for our clients and internal tools. Previously Head of Product at Stripe and Airbnb, he's launched products generating $500M+ in revenue. He ensures every project delivers measurable business value.",
+      "expertise": ["Product Strategy", "User Research", "Growth"],
+      "education": "MBA, Wharton; BS Computer Science, Berkeley",
+      "order": 5
+    },
+    {
+      "id": "jennifer-taylor",
+      "name": "Jennifer Taylor",
+      "title": "VP of Client Success",
+      "photo": "/images/leadership/jennifer-taylor.jpg",
+      "linkedin": "https://linkedin.com/in/jennifertaylor",
+      "bio": "Jennifer ensures every client achieves their goals with Drexus. With 12 years in enterprise consulting at Accenture and Deloitte, she's managed relationships with Fortune 100 companies. Her team maintains our 100% client satisfaction rate.",
+      "expertise": ["Client Relations", "Project Management", "Strategic Consulting"],
+      "education": "MBA, London Business School",
+      "order": 6
+    },
+    {
+      "id": "michael-johnson",
+      "name": "Michael Johnson",
+      "title": "VP of Design",
+      "photo": "/images/leadership/michael-johnson.jpg",
+      "linkedin": "https://linkedin.com/in/michaeljohnson",
+      "bio": "Michael leads our design practice, ensuring every product we build is beautiful and intuitive. Former Design Director at Spotify and IDEO, he's won numerous awards for his work. He believes great design is invisible but its impact is unmistakable.",
+      "expertise": ["UX Design", "Design Systems", "Brand Strategy"],
+      "education": "MFA Design, Rhode Island School of Design",
+      "order": 7
+    },
+    {
+      "id": "lisa-anderson",
+      "name": "Lisa Anderson",
+      "title": "VP of People & Culture",
+      "photo": "/images/leadership/lisa-anderson.jpg",
+      "linkedin": "https://linkedin.com/in/lisaanderson",
+      "bio": "Lisa builds the culture that makes Drexus a great place to work. With experience scaling teams at Uber and Slack, she's passionate about creating environments where people do their best work. She's grown our team from 10 to 100 while maintaining our culture.",
+      "expertise": ["Talent Acquisition", "Culture Development", "Leadership Coaching"],
+      "education": "MA Organizational Psychology, Columbia",
+      "order": 8
+    }
+  ]
+}
+

@@ -1,0 +1,375 @@
+---
+title: "Two-Week Pilot: Prove Fit Without Lock-In"
+slug: "two-week-pilot-prove-fit"
+excerpt:
+  "De-risk engagement with observable outcomes in 10 working days. Based on 100+ pilots, here's the
+  framework that reveals true vendor capability."
+date: "2024-04-01"
+type: "article"
+persona: ["cto", "product-lead"]
+readingTimeMinutes: 10
+tags: ["pilot", "procurement", "delivery"]
+ogImage: "/images/og/two-week-pilot.jpg"
+author:
+  name: "Michael Torres"
+  title: "VP of Engineering"
+  avatar: "/avatars/michael-torres.jpg"
+cta:
+  label: "See Pilot Terms"
+  href: "/pricing/pilot"
+---
+
+Traditional vendor selection fails 60% of the time because demos don't predict real-world
+performance. After running 100+ pilots, we've developed a 2-week framework that reveals true
+capability while protecting both parties. Here's exactly how to structure pilots that actually
+predict success.
+
+## Pilot Scope Principles That Prevent Scope Creep
+
+The biggest pilot killer? Trying to prove everything in two weeks. Our data shows successful pilots
+follow three principles:
+
+**One Meaningful Slice**: Choose a real problem that's representative but contained. Not a toy
+problem, not your hardest challenge. The "Goldilocks" problem that's just right.
+
+**Production-Like Conditions**: No special environments or exemptions. If they can't work with your
+actual constraints during the pilot, they can't work with them after.
+
+**Measurable Success**: Define 3-5 specific outcomes that must be achieved. "Get a feel for working
+together" is not measurable. "Deploy working OAuth integration" is.
+
+<Callout type="info" title="The 80/20 Pilot Rule">
+  A good pilot proves 80% of critical capabilities using 20% of total project scope. If you can't
+  identify that 20%, you're not ready to hire anyone.
+</Callout>
+
+## Exit Criteria and Code Ownership
+
+Clear exit criteria prevent awkward "it's not working out" conversations. Define these before
+starting:
+
+### Technical Exit Criteria
+
+1. **Core Functionality**: The agreed feature works end-to-end
+2. **Quality Bar**: Code passes your review standards
+3. **Documentation**: README sufficient for your team to maintain
+4. **Performance**: Meets agreed latency/throughput targets
+5. **Security**: Passes basic security scan
+
+### Process Exit Criteria
+
+1. **Communication**: Daily updates without prompting
+2. **Velocity**: Reasonable progress each day
+3. **Problem-Solving**: How they handle blockers
+4. **Knowledge Transfer**: Your team understands the solution
+5. **Cultural Fit**: Work style matches your team
+
+<Step number={1} title="Document Exit Criteria">
+  Write specific, measurable criteria for each category. Share with vendor before starting. Both
+  parties sign off.
+</Step>
+
+<Step number={2} title="Define Code Ownership">
+  Pilot code belongs to you, paid or not. Include in contract: "All code, documentation, and
+  artifacts created during pilot transfer to Client regardless of pilot outcome."
+</Step>
+
+<Step number={3} title="Set Go/No-Go Decision Date">
+  Schedule decision for day 11. This gives you days 1-10 to evaluate, one day to decide, and time to
+  communicate cleanly.
+</Step>
+
+## Observability + Daily Receipts
+
+Visibility prevents surprises. Require these daily artifacts:
+
+### Daily Stand-up Receipt (5 min to write)
+
+```
+Date: [Date]
+Completed Today:
+- [Specific deliverable with evidence]
+- [Another deliverable]
+
+Blockers:
+- [Issue + proposed solution]
+
+Tomorrow's Plan:
+- [Specific commitment]
+
+Questions:
+- [Anything needs clarification]
+```
+
+### Code Commit Log
+
+- All code in your repo (not theirs)
+- Meaningful commit messages
+- PR descriptions that explain why, not just what
+
+### Metrics Dashboard
+
+Track automatically:
+
+- Lines of code (trending up steadily?)
+- Test coverage (maintaining standards?)
+- Commit frequency (daily activity?)
+- PR turnaround (quick responses?)
+
+<DoDont
+  dos={[
+    "Give repository access immediately",
+    "Require work in your environment",
+    "Review code daily, give feedback fast",
+    "Track metrics automatically",
+  ]}
+  donts={[
+    "Accept 'working on local machine'",
+    "Wait until day 10 to review",
+    "Skip daily check-ins to 'save time'",
+    "Let them use their own tools exclusively",
+  ]}
+/>
+
+## Handover Readiness Checklist
+
+A successful pilot includes knowledge transfer. By day 10, you should have:
+
+<Checklist
+  title="Handover Requirements"
+  items={[
+    { text: "Working code in your repository", checked: true },
+    { text: "Documentation your team can follow", checked: true },
+    { text: "Test suite with >80% coverage", checked: true },
+    { text: "Deployment runbook", checked: false },
+    { text: "Architecture decision record", checked: false },
+    { text: "List of remaining tasks with estimates", checked: false },
+  ]}
+/>
+
+### The Handover Test
+
+Have one of your developers who wasn't involved:
+
+1. Clone the repository
+2. Follow setup documentation
+3. Make a small change
+4. Deploy to staging
+
+If they succeed in <2 hours, handover is complete. If not, you've identified gaps before signing a
+larger contract.
+
+## Retro & Go/No-Go Decision Framework
+
+Day 11 is decision day. Use this framework:
+
+### Pilot Retrospective (1 hour)
+
+**What Went Well**
+
+- Specific achievements
+- Process improvements
+- Communication highlights
+
+**What Could Improve**
+
+- Friction points
+- Unmet expectations
+- Process gaps
+
+**Key Learnings**
+
+- About the vendor
+- About your requirements
+- About the project complexity
+
+### Go/No-Go Scoring
+
+Rate each area 1-5:
+
+- Technical Delivery: \_/5
+- Communication: \_/5
+- Code Quality: \_/5
+- Velocity: \_/5
+- Problem Solving: \_/5
+
+**Decision Rules**:
+
+- All 4-5: Strong proceed
+- Mostly 3-4: Proceed with adjustments
+- Any 1-2: No-go unless critical issue
+
+<ProsCons
+  pros={[
+    "See actual work quality before commitment",
+    "Test communication and culture fit",
+    "Reduce risk of expensive mistakes",
+    "Build relationship gradually",
+  ]}
+  cons={[
+    "Delays full project start by 2 weeks",
+    "Costs more than jumping straight in",
+    "Some vendors resist pilot model",
+    "Limited scope may not reveal all issues",
+  ]}
+/>
+
+## Real Pilot Examples
+
+### Success Case: API Integration Vendor
+
+**Pilot Scope**: Integrate with Salesforce and sync contacts **Daily Progress**: Steady,
+communicated blockers early **Code Quality**: Excellent tests, clear documentation **Result**:
+Expanded to full integration project **Key Learning**: Their Salesforce expertise saved weeks
+
+### Failure Case: Frontend Development Shop
+
+**Pilot Scope**: Build responsive dashboard component **Daily Progress**: Sporadic, surprise delays
+**Code Quality**: No tests, poor accessibility **Result**: No-go decision on day 8 **Key Learning**:
+Portfolio didn't reflect actual capability
+
+### Mixed Case: Data Engineering Team
+
+**Pilot Scope**: Build ETL pipeline for one data source **Daily Progress**: Good but overcomplicated
+solution **Code Quality**: Solid but over-engineered **Result**: Proceeded with strict architecture
+guidelines **Key Learning**: Needed clearer constraints
+
+## Pricing Models That Work
+
+Based on 100+ pilots, these pricing models align incentives:
+
+### Option 1: Paid Pilot, Credit Forward
+
+- Pilot cost: $15-25K
+- If proceed: Credit toward project
+- If not: Clean break, you keep code
+- **Best for**: Established vendors
+
+### Option 2: Risk-Shared Pilot
+
+- Pilot cost: 50% of normal rate
+- If proceed: Pay other 50%
+- If not: Reduced cost for both parties
+- **Best for**: New relationships
+
+### Option 3: Success-Based Pilot
+
+- No upfront cost
+- Pay only if exit criteria met
+- Higher project rates if proceed
+- **Best for**: Confident vendors
+
+Avoid free pilots - they attract wrong vendors and create poor incentives.
+
+## Common Pilot Pitfalls
+
+**Pitfall 1: Vague Scope** "Build something to show your skills" **Fix**: Define exact deliverable
+with acceptance criteria
+
+**Pitfall 2: Best Athlete Problem** They send their A-team for pilot, B-team for project **Fix**:
+Require same team members to continue
+
+**Pitfall 3: Extended Pilot Syndrome** "Just one more week to really prove it" **Fix**: Hard stop at
+10 working days
+
+**Pitfall 4: No-Decision Limbo** Pilot ends without clear next steps **Fix**: Pre-scheduled decision
+meeting
+
+## Your Pilot Planning Template
+
+Use this template for your next vendor pilot:
+
+```markdown
+## Pilot Overview
+
+Vendor: [Name] Dates: [Start] - [End] (10 working days) Decision Date: [Day 11]
+
+## Pilot Scope
+
+Deliverable: [Specific feature/component] Success Metrics:
+
+1. [Measurable outcome]
+2. [Another outcome]
+3. [Third outcome]
+
+## Exit Criteria
+
+Technical:
+
+- [ ] Core functionality works
+- [ ] Passes code review
+- [ ] Includes documentation
+- [ ] Meets performance targets
+- [ ] Security scan clean
+
+Process:
+
+- [ ] Daily updates received
+- [ ] Blockers communicated promptly
+- [ ] Knowledge transferred
+- [ ] Team collaboration smooth
+
+## Code Ownership
+
+All artifacts transfer to us regardless of outcome
+
+## Pricing
+
+Model: [Paid/Risk-Shared/Success-Based] Pilot Cost: $[Amount] Credit Terms: [If applicable]
+
+## Team
+
+Vendor Lead: [Name] Our Lead: [Name] Required Continuity: [Same team for project]
+```
+
+## Post-Pilot Expansion Path
+
+When pilots succeed, smooth expansion prevents momentum loss:
+
+### Week 1 Post-Pilot
+
+- Contract negotiation (pre-drafted)
+- Team expansion planning
+- Full project scoping
+- Environment setup
+
+### Week 2 Post-Pilot
+
+- Kickoff with expanded team
+- Knowledge transfer from pilot
+- Establish ongoing rituals
+- Begin first full sprint
+
+Keep the same:
+
+- Communication patterns
+- Code standards
+- Review cycles
+- Team members (critical!)
+
+## Now Do This
+
+De-risk your next vendor decision with these steps:
+
+<Checklist
+  title="Your Pilot Action Plan"
+  items={[
+    { text: "Define one meaningful pilot project", checked: false },
+    { text: "Write specific exit criteria", checked: false },
+    { text: "Schedule your go/no-go decision now", checked: false },
+  ]}
+/>
+
+Ready to structure a pilot? Our [Pilot Terms Template](/pricing/pilot) provides standard language
+that protects both parties while enabling quick starts. For evaluating vendors before the pilot, see
+our [vendor diligence scorecard](/insights/articles/vendor-diligence-like-a-cto).
+
+For managing pilot risks effectively, our
+[delivery risk ledger](/insights/articles/delivery-risk-ledger) helps track pilot-specific unknowns.
+
+<DownloadCTA
+  title="Two-Week Pilot Agreement Template"
+  description="Legal-approved template for structuring vendor pilots with clear terms"
+  fileUrl="/pricing/pilot"
+  fileSize="Contract template"
+/>

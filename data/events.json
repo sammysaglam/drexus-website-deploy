@@ -1,0 +1,344 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "slug": "mvp-to-scale-workshop-april-2024",
+      "title": "MVP to Scale: Building Products That Last",
+      "description": "A hands-on workshop for founders and product leaders on transitioning from MVP to scalable product. Learn our proven frameworks for sustainable growth.",
+      "type": "workshop",
+      "status": "upcoming",
+      "persona": ["founder", "product", "product-lead"],
+      "date": {
+        "start": "2024-04-15T09:00:00+02:00",
+        "end": "2024-04-15T13:00:00+02:00",
+        "timezone": "Europe/Zurich",
+        "displayDate": "April 15, 2024"
+      },
+      "location": {
+        "type": "in-person",
+        "venue": "Impact Hub Zurich",
+        "address": "Sihlquai 131, 8005 Zürich",
+        "city": "Zurich",
+        "country": "Switzerland"
+      },
+      "speakers": [
+        {
+          "name": "Sarah Chen",
+          "title": "Head of Product Strategy, Drexus",
+          "bio": "15+ years building and scaling B2B products from 0 to $100M ARR",
+          "photo": "/images/speakers/sarah-chen.jpg",
+          "linkedin": "https://linkedin.com/in/sarahchen"
+        },
+        {
+          "name": "Marcus Weber",
+          "title": "VP Engineering, Drexus",
+          "bio": "Former CTO at 3 successful startups, expert in technical debt management",
+          "photo": "/images/speakers/marcus-weber.jpg",
+          "linkedin": "https://linkedin.com/in/marcusweber"
+        }
+      ],
+      "agenda": [
+        { "time": "09:00", "title": "Registration & Coffee", "duration": "30 min" },
+        {
+          "time": "09:30",
+          "title": "The MVP Trap: Common Anti-Patterns",
+          "duration": "45 min",
+          "speaker": "Sarah Chen"
+        },
+        {
+          "time": "10:15",
+          "title": "Technical Foundations That Scale",
+          "duration": "45 min",
+          "speaker": "Marcus Weber"
+        },
+        { "time": "11:00", "title": "Break", "duration": "15 min" },
+        {
+          "time": "11:15",
+          "title": "Workshop: Scope Your Next Phase",
+          "duration": "60 min",
+          "speaker": "Both"
+        },
+        { "time": "12:15", "title": "Q&A and Networking", "duration": "45 min" }
+      ],
+      "registration": {
+        "status": "open",
+        "price": "CHF 299",
+        "capacity": 40,
+        "registered": 28,
+        "link": "https://events.drexus.com/register/mvp-to-scale-april-2024"
+      },
+      "tags": ["product-development", "scaling", "mvp", "technical-strategy"],
+      "featured": true
+    },
+    {
+      "id": "2",
+      "slug": "conversion-optimization-webinar-march-2024",
+      "title": "Conversion Optimization: Quick Wins Before the Rebuild",
+      "description": "Learn how to identify and fix conversion killers without a complete redesign. Based on our analysis of 200+ B2B sites.",
+      "type": "webinar",
+      "status": "upcoming",
+      "persona": ["ops", "product", "founder"],
+      "date": {
+        "start": "2024-03-28T16:00:00+01:00",
+        "end": "2024-03-28T17:00:00+01:00",
+        "timezone": "Europe/Zurich",
+        "displayDate": "March 28, 2024"
+      },
+      "location": {
+        "type": "virtual",
+        "platform": "Zoom Webinar"
+      },
+      "speakers": [
+        {
+          "name": "Jennifer Liu",
+          "title": "Director of Growth, Drexus",
+          "bio": "Helped 50+ companies improve conversion rates by 20-40%",
+          "photo": "/images/speakers/jennifer-liu.jpg",
+          "linkedin": "https://linkedin.com/in/jenniferliu"
+        }
+      ],
+      "agenda": [
+        { "time": "16:00", "title": "The 5-Minute Conversion Audit", "duration": "15 min" },
+        { "time": "16:15", "title": "Top 10 Quick Wins That Actually Work", "duration": "20 min" },
+        { "time": "16:35", "title": "Live Site Teardown", "duration": "15 min" },
+        { "time": "16:50", "title": "Q&A", "duration": "10 min" }
+      ],
+      "registration": {
+        "status": "open",
+        "price": "Free",
+        "capacity": 500,
+        "registered": 312,
+        "link": "https://events.drexus.com/register/conversion-optimization-march-2024"
+      },
+      "resources": [
+        {
+          "title": "Conversion Audit Checklist",
+          "type": "pdf",
+          "link": "/resources/conversion-audit-checklist.pdf"
+        },
+        { "title": "A/B Test Calculator", "type": "tool", "link": "/tools/ab-test-calculator" }
+      ],
+      "tags": ["conversion", "optimization", "growth", "quick-wins"],
+      "featured": true
+    },
+    {
+      "id": "3",
+      "slug": "cto-office-hours-april-2024",
+      "title": "CTO Office Hours: Vendor Diligence Deep Dive",
+      "description": "Monthly office hours with our CTO. This month: How to evaluate vendors like a CTO - what to ask, red flags to avoid.",
+      "type": "office-hours",
+      "status": "upcoming",
+      "persona": ["cto", "product-lead"],
+      "date": {
+        "start": "2024-04-10T17:00:00+02:00",
+        "end": "2024-04-10T18:00:00+02:00",
+        "timezone": "Europe/Zurich",
+        "displayDate": "April 10, 2024"
+      },
+      "location": {
+        "type": "virtual",
+        "platform": "Google Meet"
+      },
+      "speakers": [
+        {
+          "name": "David Kumar",
+          "title": "CTO, Drexus",
+          "bio": "20+ years building enterprise software, former VP Eng at Salesforce",
+          "photo": "/images/speakers/david-kumar.jpg",
+          "linkedin": "https://linkedin.com/in/davidkumar"
+        }
+      ],
+      "agenda": [
+        { "time": "17:00", "title": "Topic Introduction & Context", "duration": "10 min" },
+        { "time": "17:10", "title": "Open Q&A - Bring Your Questions", "duration": "45 min" },
+        { "time": "17:55", "title": "Wrap-up & Next Month Preview", "duration": "5 min" }
+      ],
+      "registration": {
+        "status": "open",
+        "price": "Free",
+        "capacity": 30,
+        "registered": 18,
+        "link": "https://events.drexus.com/register/cto-office-hours-april-2024"
+      },
+      "tags": ["vendor-management", "technical-diligence", "cto", "office-hours"],
+      "featured": false
+    },
+    {
+      "id": "4",
+      "slug": "experiment-culture-workshop-feb-2024",
+      "title": "Building an Experiment Culture: 4 Tests Per Month",
+      "description": "Transform your team into systematic experimenters. Learn the frameworks and tools to run meaningful experiments consistently.",
+      "type": "workshop",
+      "status": "past",
+      "persona": ["product", "product-lead", "ops"],
+      "date": {
+        "start": "2024-02-20T14:00:00+01:00",
+        "end": "2024-02-20T17:30:00+01:00",
+        "timezone": "Europe/Zurich",
+        "displayDate": "February 20, 2024"
+      },
+      "location": {
+        "type": "hybrid",
+        "venue": "Drexus Office",
+        "address": "Hardturmstrasse 161, 8005 Zürich",
+        "city": "Zurich",
+        "country": "Switzerland",
+        "platform": "Also streaming on Zoom"
+      },
+      "speakers": [
+        {
+          "name": "Alex Rivera",
+          "title": "Head of Experimentation, Drexus",
+          "bio": "Built experimentation programs at Spotify and Booking.com",
+          "photo": "/images/speakers/alex-rivera.jpg",
+          "linkedin": "https://linkedin.com/in/alexrivera"
+        }
+      ],
+      "agenda": [
+        { "time": "14:00", "title": "Why Most Experiments Fail", "duration": "30 min" },
+        { "time": "14:30", "title": "The 4-Per-Month Framework", "duration": "45 min" },
+        { "time": "15:15", "title": "Break", "duration": "15 min" },
+        { "time": "15:30", "title": "Tools and Templates", "duration": "45 min" },
+        { "time": "16:15", "title": "Workshop: Plan Your First Month", "duration": "60 min" },
+        { "time": "17:15", "title": "Wrap-up", "duration": "15 min" }
+      ],
+      "registration": {
+        "status": "closed",
+        "price": "CHF 399",
+        "capacity": 60,
+        "registered": 58
+      },
+      "onDemand": {
+        "available": true,
+        "slug": "experiment-culture-workshop-recording",
+        "duration": "3h 15min",
+        "views": 245
+      },
+      "resources": [
+        {
+          "title": "Experiment Planning Template",
+          "type": "template",
+          "link": "/resources/experiment-template.xlsx"
+        },
+        {
+          "title": "Statistical Significance Calculator",
+          "type": "tool",
+          "link": "/tools/significance-calculator"
+        },
+        {
+          "title": "Workshop Slides",
+          "type": "pdf",
+          "link": "/resources/experiment-workshop-slides.pdf"
+        }
+      ],
+      "tags": ["experimentation", "growth", "product-management", "data-driven"],
+      "featured": false
+    },
+    {
+      "id": "5",
+      "slug": "latency-budgets-webinar-jan-2024",
+      "title": "Setting Latency Budgets That Actually Stick",
+      "description": "Stop playing latency whack-a-mole. Learn how to set and enforce performance budgets across your entire stack.",
+      "type": "webinar",
+      "status": "past",
+      "persona": ["cto", "product-lead"],
+      "date": {
+        "start": "2024-01-25T15:00:00+01:00",
+        "end": "2024-01-25T16:00:00+01:00",
+        "timezone": "Europe/Zurich",
+        "displayDate": "January 25, 2024"
+      },
+      "location": {
+        "type": "virtual",
+        "platform": "YouTube Live"
+      },
+      "speakers": [
+        {
+          "name": "Marcus Weber",
+          "title": "VP Engineering, Drexus",
+          "bio": "Performance optimization expert, contributor to Web Vitals",
+          "photo": "/images/speakers/marcus-weber.jpg",
+          "linkedin": "https://linkedin.com/in/marcusweber"
+        }
+      ],
+      "registration": {
+        "status": "closed",
+        "price": "Free",
+        "capacity": 1000,
+        "registered": 876
+      },
+      "onDemand": {
+        "available": true,
+        "slug": "latency-budgets-webinar-recording",
+        "duration": "58 min",
+        "views": 1420,
+        "transcript": true
+      },
+      "resources": [
+        {
+          "title": "Latency Budget Calculator",
+          "type": "tool",
+          "link": "/tools/latency-budget-calculator"
+        },
+        {
+          "title": "Performance Monitoring Guide",
+          "type": "pdf",
+          "link": "/resources/performance-monitoring-guide.pdf"
+        }
+      ],
+      "tags": ["performance", "latency", "web-vitals", "monitoring"],
+      "featured": false
+    },
+    {
+      "id": "6",
+      "slug": "founder-roundtable-may-2024",
+      "title": "Founder Roundtable: Scaling Past $10M ARR",
+      "description": "Intimate roundtable discussion with founders who've successfully scaled past $10M ARR. Limited to 12 participants.",
+      "type": "roundtable",
+      "status": "upcoming",
+      "persona": ["founder"],
+      "date": {
+        "start": "2024-05-08T18:00:00+02:00",
+        "end": "2024-05-08T20:30:00+02:00",
+        "timezone": "Europe/Zurich",
+        "displayDate": "May 8, 2024"
+      },
+      "location": {
+        "type": "in-person",
+        "venue": "Private Dining Room",
+        "address": "Details provided upon registration",
+        "city": "Zurich",
+        "country": "Switzerland"
+      },
+      "speakers": [
+        {
+          "name": "Thomas Müller",
+          "title": "CEO & Founder, Drexus",
+          "bio": "3x founder, 2 exits, currently building Drexus",
+          "photo": "/images/speakers/thomas-mueller.jpg",
+          "linkedin": "https://linkedin.com/in/thomasmueller"
+        },
+        {
+          "name": "Guest Founders",
+          "title": "3 Invited Founders",
+          "bio": "Founders from our portfolio who've scaled past $10M ARR",
+          "photo": "/images/speakers/guest-speakers.jpg"
+        }
+      ],
+      "agenda": [
+        { "time": "18:00", "title": "Welcome & Introductions", "duration": "30 min" },
+        { "time": "18:30", "title": "Roundtable Discussion", "duration": "90 min" },
+        { "time": "20:00", "title": "Dinner & Networking", "duration": "30 min" }
+      ],
+      "registration": {
+        "status": "waitlist",
+        "price": "By Invitation",
+        "capacity": 12,
+        "registered": 12,
+        "link": "https://events.drexus.com/register/founder-roundtable-may-2024"
+      },
+      "tags": ["founders", "scaling", "leadership", "exclusive"],
+      "featured": true
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+[
+  {
+    "title": "The MVP Scope 1-Pager We Wish We Had",
+    "slug": "mvp-scope-one-pager",
+    "persona": ["founder", "product"],
+    "type": "article",
+    "primaryCTA": {
+      "label": "Build Your Scope 1-Pager",
+      "href": "/tools/mvp-scope-builder"
+    },
+    "promise": "Ship a credible V1 in 4–6 weeks by cutting surface area without losing the point.",
+    "outline": [
+      "Why founders over-scope (runway, investor pressure)",
+      "The One Activation Path rule",
+      "Must-have vs. cut-line features",
+      "Acceptance criteria by slice",
+      "Friday progress receipts",
+      "Template + example"
+    ],
+    "tags": ["mvp", "scope", "activation", "planning"]
+  },
+  {
+    "title": "Conversion Triage: Fix Revenue Before Rebuild",
+    "slug": "conversion-triage-before-rebuild",
+    "persona": ["ops", "product"],
+    "type": "article",
+    "primaryCTA": {
+      "label": "Run a Conversion Audit",
+      "href": "/tools/conversion-audit"
+    },
+    "promise": "Find and fix the 20% of friction causing 80% of the loss.",
+    "outline": [
+      "Diagnose traffic vs. conversion mismatch",
+      "Latency budget (p95)",
+      "Form field minimization + async validation",
+      "Trust signals & microcopy",
+      "Prioritized punch list in 48 hours"
+    ],
+    "tags": ["conversion", "latency", "forms", "ops"]
+  },
+  {
+    "title": "The 4-Experiments/Month Planner",
+    "slug": "four-experiments-per-month",
+    "persona": ["product", "product-lead"],
+    "type": "playbook",
+    "primaryCTA": {
+      "label": "Open Experiment Planner",
+      "href": "/tools/experiment-planner"
+    },
+    "promise": "Reboot learning velocity with a cadence any team can run.",
+    "outline": [
+      "Decision latency and opportunity cost",
+      "Two-week cycles & sample-size sanity",
+      "Experiment backlog grooming",
+      "Guardrails and ethics",
+      "Template walkthrough"
+    ],
+    "tags": ["experimentation", "growth", "product"]
+  },
+  {
+    "title": "Delivery Risk Ledger: Unblock the Dead Sprint",
+    "slug": "delivery-risk-ledger",
+    "persona": ["product-lead", "cto"],
+    "type": "article",
+    "primaryCTA": {
+      "label": "Copy the Risk Ledger",
+      "href": "/tools/risk-ledger"
+    },
+    "promise": "Surface unknowns and dependencies before they burn your launch.",
+    "outline": [
+      "Why sprints stall",
+      "Risk taxonomy (unknowns, dependencies, env)",
+      "Severity x likelihood scoring",
+      "Owner map and cut-today decisions",
+      "Weekly review ritual"
+    ],
+    "tags": ["delivery", "risk", "agile"]
+  },
+  {
+    "title": "Vendor Diligence Like a CTO",
+    "slug": "vendor-diligence-like-a-cto",
+    "persona": ["cto", "product-lead"],
+    "type": "article",
+    "primaryCTA": {
+      "label": "Use the Scorecard",
+      "href": "/tools/vendor-diligence-scorecard"
+    },
+    "promise": "Score SLAs, bus factor, and ownership before you sign.",
+    "outline": [
+      "Common failure modes",
+      "SLA clauses that matter",
+      "Bus factor & continuity",
+      "Observability and Friday receipts",
+      "Pilot rubric with exit criteria"
+    ],
+    "tags": ["vendor", "sla", "procurement"]
+  },
+  {
+    "title": "Latency Budgets That Actually Stick",
+    "slug": "latency-budgets-that-stick",
+    "persona": ["ops", "cto"],
+    "type": "benchmark",
+    "primaryCTA": {
+      "label": "Calculate Your Budget",
+      "href": "/tools/latency-budget-calculator"
+    },
+    "promise": "Set p95/p99 targets your stack can realistically meet.",
+    "outline": [
+      "Why p95 matters for conversion",
+      "Budgeting by page & path",
+      "Backend vs. frontend ownership",
+      "Monitoring SLOs",
+      "30-day rollout plan"
+    ],
+    "tags": ["latency", "slo", "benchmarks"]
+  },
+  {
+    "title": "Acceptance Criteria that Prevent Rework",
+    "slug": "acceptance-criteria-prevent-rework",
+    "persona": ["founder", "product"],
+    "type": "article",
+    "primaryCTA": {
+      "label": "Grab the AC Checklist",
+      "href": "/playbooks/acceptance-criteria"
+    },
+    "promise": "Turn specs into testable slices with fewer surprises.",
+    "outline": [
+      "Common AC anti-patterns",
+      "Given/When/Then primer",
+      "Non-functional requirements baked in",
+      "Definition of done",
+      "Template + example"
+    ],
+    "tags": ["quality", "planning", "testing"]
+  },
+  {
+    "title": "Two-Week Pilot: Prove Fit Without Lock-In",
+    "slug": "two-week-pilot-prove-fit",
+    "persona": ["cto", "product-lead"],
+    "type": "article",
+    "primaryCTA": {
+      "label": "See Pilot Terms",
+      "href": "/pricing/pilot"
+    },
+    "promise": "De-risk engagement with observable outcomes in 10 working days.",
+    "outline": [
+      "Pilot scope principles",
+      "Exit criteria and code ownership",
+      "Observability + daily receipts",
+      "Handover readiness",
+      "Retro & go/no-go"
+    ],
+    "tags": ["pilot", "procurement", "delivery"]
+  },
+  {
+    "title": "The Conversion Microcopy Playbook",
+    "slug": "conversion-microcopy-playbook",
+    "persona": ["ops", "product"],
+    "type": "playbook",
+    "primaryCTA": {
+      "label": "Run a Conversion Audit",
+      "href": "/tools/conversion-audit"
+    },
+    "promise": "Fix forms and checkout friction with precise language.",
+    "outline": [
+      "Where microcopy matters most",
+      "Field hints, validation, errors",
+      "Trust cues and address autofill",
+      "Before/After examples",
+      "Checklist & QA"
+    ],
+    "tags": ["ux", "microcopy", "conversion"]
+  },
+  {
+    "title": "Compare Your Process to the Drexus Way",
+    "slug": "compare-your-process",
+    "persona": ["founder", "ops", "product", "product-lead", "cto"],
+    "type": "article",
+    "primaryCTA": {
+      "label": "Take the 5-Minute Quiz",
+      "href": "/tools/compare-your-process"
+    },
+    "promise": "Spot 5 gaps that slow shipping and how to close them.",
+    "outline": [
+      "What 'Drexus Way' means (cadence, cut-lines, receipts)",
+      "Self-assessment quiz paths",
+      "Quick wins by role",
+      "Link to deeper playbooks",
+      "Commit to 1 improvement this week"
+    ],
+    "tags": ["process", "cadence", "self-assessment"]
+  }
+]

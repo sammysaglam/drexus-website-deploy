@@ -1,0 +1,370 @@
+{
+  "caseStudies": [
+    {
+      "id": "1",
+      "slug": "fintech-mvp-to-series-a",
+      "title": "From MVP to Series A in 18 Months",
+      "client": "PayFlow Technologies",
+      "industry": "FinTech",
+      "logo": "/images/clients/payflow-logo.svg",
+      "summary": "How we helped a fintech startup build a compliant payment platform that scaled to $2M ARR and secured Series A funding.",
+      "featured": true,
+      "challenge": {
+        "description": "PayFlow needed to build a PCI-compliant payment processing platform from scratch while competing against established players. They had 6 months of runway and needed to prove product-market fit quickly.",
+        "keyPoints": [
+          "No technical co-founder, limited development resources",
+          "Complex regulatory requirements (PCI DSS, SOC 2)",
+          "Need to integrate with multiple banking APIs",
+          "Aggressive timeline to secure next funding round"
+        ]
+      },
+      "approach": {
+        "description": "We implemented a phased approach focusing on compliance-first architecture while rapidly iterating on user experience.",
+        "phases": [
+          {
+            "name": "Foundation (Weeks 1-4)",
+            "activities": [
+              "Security architecture design",
+              "Core payment processing MVP",
+              "Basic compliance framework"
+            ]
+          },
+          {
+            "name": "Iteration (Weeks 5-12)",
+            "activities": [
+              "User onboarding optimization",
+              "Multi-bank integration",
+              "Automated compliance reporting"
+            ]
+          },
+          {
+            "name": "Scale (Weeks 13-24)",
+            "activities": [
+              "Performance optimization",
+              "Advanced fraud detection",
+              "White-label capabilities"
+            ]
+          }
+        ]
+      },
+      "results": {
+        "description": "PayFlow launched on time, achieved compliance certifications, and exceeded growth targets.",
+        "metrics": [
+          { "label": "Time to Market", "value": "4 months", "change": "-50%" },
+          { "label": "Monthly Revenue", "value": "$180K", "change": "+2,400%" },
+          { "label": "Processing Volume", "value": "$25M/mo", "change": "+5,000%" },
+          { "label": "Series A Raised", "value": "$15M", "change": "" }
+        ],
+        "testimonial": {
+          "quote": "Drexus didn't just build our product—they built our engineering culture. Their team became our team, and that foundation enabled us to scale rapidly after their engagement.",
+          "author": "Sarah Chen",
+          "title": "CEO & Founder",
+          "company": "PayFlow Technologies"
+        }
+      },
+      "stack": {
+        "frontend": ["React", "TypeScript", "Tailwind CSS"],
+        "backend": ["Node.js", "PostgreSQL", "Redis"],
+        "infrastructure": ["AWS", "Kubernetes", "Terraform"],
+        "security": ["Vault", "AWS KMS", "Datadog"]
+      },
+      "timeline": "6 months",
+      "teamSize": "4-6 engineers",
+      "services": ["MVP Development", "Security & Compliance", "Technical Leadership"],
+      "outcomes": [
+        "Achieved PCI DSS Level 1 compliance in record time",
+        "Built a platform processing $25M+ monthly",
+        "Enabled successful $15M Series A raise",
+        "Transitioned smoothly to in-house team"
+      ]
+    },
+    {
+      "id": "2",
+      "slug": "ecommerce-conversion-optimization",
+      "title": "3x Conversion Rate in 90 Days",
+      "client": "StyleHub",
+      "industry": "E-commerce",
+      "logo": "/images/clients/stylehub-logo.svg",
+      "summary": "Systematic conversion optimization that tripled revenue without a full rebuild.",
+      "featured": true,
+      "challenge": {
+        "description": "StyleHub was losing $2M annually to cart abandonment despite heavy marketing spend. Their conversion rate was stuck at 0.8%, well below industry standards.",
+        "keyPoints": [
+          "67% cart abandonment rate",
+          "Poor mobile experience (70% of traffic)",
+          "Slow page loads (8+ seconds)",
+          "No data-driven decision making"
+        ]
+      },
+      "approach": {
+        "description": "We implemented a data-driven optimization program focusing on quick wins while building long-term experimentation capabilities.",
+        "phases": [
+          {
+            "name": "Audit & Quick Wins (Week 1-2)",
+            "activities": [
+              "Conversion funnel analysis",
+              "Performance optimization",
+              "Mobile UX fixes"
+            ]
+          },
+          {
+            "name": "Experimentation (Weeks 3-8)",
+            "activities": [
+              "A/B testing framework",
+              "Checkout flow optimization",
+              "Personalization engine"
+            ]
+          },
+          {
+            "name": "Scale & Handoff (Weeks 9-12)",
+            "activities": ["Team training", "Process documentation", "Ongoing experiment roadmap"]
+          }
+        ]
+      },
+      "results": {
+        "description": "StyleHub achieved a 3.2x improvement in conversion rate, adding $6M in annual revenue.",
+        "metrics": [
+          { "label": "Conversion Rate", "value": "2.6%", "change": "+225%" },
+          { "label": "Cart Abandonment", "value": "41%", "change": "-39%" },
+          { "label": "Page Load Time", "value": "2.1s", "change": "-74%" },
+          { "label": "Revenue Impact", "value": "+$6M/yr", "change": "+180%" }
+        ],
+        "testimonial": {
+          "quote": "In 90 days, Drexus delivered more impact than our previous agency did in 2 years. They didn't just optimize—they taught us how to think about optimization.",
+          "author": "Marcus Johnson",
+          "title": "VP of E-commerce",
+          "company": "StyleHub"
+        }
+      },
+      "stack": {
+        "frontend": ["Next.js", "React", "Tailwind CSS"],
+        "analytics": ["Google Analytics 4", "Segment", "Amplitude"],
+        "testing": ["Optimizely", "Hotjar", "FullStory"],
+        "performance": ["Cloudflare", "Vercel", "Web Vitals"]
+      },
+      "timeline": "3 months",
+      "teamSize": "3-4 engineers",
+      "services": ["Conversion Optimization", "Performance Engineering", "Analytics Setup"],
+      "outcomes": [
+        "225% increase in conversion rate",
+        "Reduced cart abandonment by 39%",
+        "Improved Core Web Vitals scores to 'Good'",
+        "Built sustainable experimentation culture"
+      ]
+    },
+    {
+      "id": "3",
+      "slug": "saas-platform-rebuild",
+      "title": "Legacy Platform Modernization",
+      "client": "DataSync Pro",
+      "industry": "B2B SaaS",
+      "logo": "/images/clients/datasync-logo.svg",
+      "summary": "Rebuilt a 10-year-old data integration platform while maintaining 99.9% uptime for enterprise customers.",
+      "featured": false,
+      "challenge": {
+        "description": "DataSync's monolithic Ruby application was limiting growth. They needed to modernize without disrupting service for 200+ enterprise customers processing 1B+ records daily.",
+        "keyPoints": [
+          "10-year-old monolithic codebase",
+          "Unable to scale beyond 1B records/day",
+          "45-minute deployment process",
+          "Growing technical debt blocking features"
+        ]
+      },
+      "approach": {
+        "description": "We executed a gradual migration strategy, moving to microservices while maintaining full backward compatibility.",
+        "phases": [
+          {
+            "name": "Analysis & Planning (Month 1)",
+            "activities": ["Codebase audit", "Architecture design", "Migration roadmap"]
+          },
+          {
+            "name": "Core Services (Months 2-6)",
+            "activities": [
+              "Extract critical services",
+              "Build new data pipeline",
+              "Implement service mesh"
+            ]
+          },
+          {
+            "name": "Migration & Optimization (Months 7-9)",
+            "activities": [
+              "Gradual customer migration",
+              "Performance tuning",
+              "Team knowledge transfer"
+            ]
+          }
+        ]
+      },
+      "results": {
+        "description": "DataSync now processes 10B+ records daily with 5-minute deployments and 99.99% uptime.",
+        "metrics": [
+          { "label": "Processing Capacity", "value": "10B/day", "change": "+900%" },
+          { "label": "Deployment Time", "value": "5 min", "change": "-89%" },
+          { "label": "Uptime", "value": "99.99%", "change": "+0.09%" },
+          { "label": "Feature Velocity", "value": "3x faster", "change": "+200%" }
+        ],
+        "testimonial": {
+          "quote": "Drexus managed the impossible—rebuilding our plane while flying it. Zero downtime, zero data loss, and our customers actually noticed the performance improvements.",
+          "author": "Alex Kumar",
+          "title": "CTO",
+          "company": "DataSync Pro"
+        }
+      },
+      "stack": {
+        "frontend": ["React", "TypeScript", "Material-UI"],
+        "backend": ["Go", "Python", "PostgreSQL", "Kafka"],
+        "infrastructure": ["Kubernetes", "Istio", "Prometheus"],
+        "data": ["Apache Beam", "BigQuery", "Redis"]
+      },
+      "timeline": "9 months",
+      "teamSize": "5-8 engineers",
+      "services": ["Platform Modernization", "Architecture Design", "DevOps Transformation"],
+      "outcomes": [
+        "10x increase in processing capacity",
+        "Reduced deployment time by 89%",
+        "Achieved 99.99% uptime SLA",
+        "Enabled 3x faster feature delivery"
+      ]
+    },
+    {
+      "id": "4",
+      "slug": "healthcare-compliance-platform",
+      "title": "HIPAA-Compliant Platform in 16 Weeks",
+      "client": "MedConnect",
+      "industry": "Healthcare",
+      "logo": "/images/clients/medconnect-logo.svg",
+      "summary": "Built a secure telemedicine platform that passed HIPAA audit on first attempt.",
+      "featured": false,
+      "challenge": {
+        "description": "MedConnect needed to launch a telemedicine platform before competitors, but healthcare compliance requirements typically add 6-12 months to development.",
+        "keyPoints": [
+          "Strict HIPAA compliance requirements",
+          "Integration with 3 different EHR systems",
+          "Real-time video consultation needs",
+          "First-mover advantage window closing"
+        ]
+      },
+      "approach": {
+        "description": "We used a compliance-first architecture with pre-certified components to accelerate development without compromising security.",
+        "phases": [
+          {
+            "name": "Compliance Foundation (Weeks 1-3)",
+            "activities": [
+              "HIPAA-compliant architecture",
+              "Security controls implementation",
+              "Audit trail system"
+            ]
+          },
+          {
+            "name": "Core Platform (Weeks 4-10)",
+            "activities": ["Video consultation engine", "EHR integrations", "Patient portal"]
+          },
+          {
+            "name": "Validation & Launch (Weeks 11-16)",
+            "activities": ["Security audit preparation", "Load testing", "Compliance documentation"]
+          }
+        ]
+      },
+      "results": {
+        "description": "MedConnect launched on schedule, passed HIPAA audit with zero findings, and onboarded 50+ clinics in the first quarter.",
+        "metrics": [
+          { "label": "Time to Market", "value": "16 weeks", "change": "-60%" },
+          { "label": "Audit Findings", "value": "0", "change": "" },
+          { "label": "Clinics Onboarded", "value": "50+", "change": "" },
+          { "label": "Patient Satisfaction", "value": "4.8/5", "change": "" }
+        ],
+        "testimonial": {
+          "quote": "Drexus understood healthcare isn't just about code—it's about compliance, security, and trust. They delivered all three in record time.",
+          "author": "Dr. Rachel Martinez",
+          "title": "Chief Medical Officer",
+          "company": "MedConnect"
+        }
+      },
+      "stack": {
+        "frontend": ["React", "TypeScript", "WebRTC"],
+        "backend": ["Node.js", "PostgreSQL", "Redis"],
+        "infrastructure": ["AWS HIPAA", "Kubernetes", "Vault"],
+        "integrations": ["Epic", "Cerner", "Allscripts"]
+      },
+      "timeline": "4 months",
+      "teamSize": "4-5 engineers",
+      "services": ["HIPAA Compliance", "Healthcare Integrations", "Secure Development"],
+      "outcomes": [
+        "Launched 60% faster than typical healthcare projects",
+        "Passed HIPAA audit with zero findings",
+        "Integrated with 3 major EHR systems",
+        "Achieved 4.8/5 patient satisfaction score"
+      ]
+    },
+    {
+      "id": "5",
+      "slug": "ai-startup-scaling",
+      "title": "Scaling AI Infrastructure for 100x Growth",
+      "client": "NeuralFlow AI",
+      "industry": "AI/ML",
+      "logo": "/images/clients/neuralflow-logo.svg",
+      "summary": "Architected ML infrastructure that scaled from 1K to 100K daily predictions while reducing costs by 70%.",
+      "featured": true,
+      "challenge": {
+        "description": "NeuralFlow's AI models were gaining traction, but their infrastructure costs were unsustainable. At current growth rate, they'd burn through runway in 4 months.",
+        "keyPoints": [
+          "GPU costs exceeding revenue by 3x",
+          "15-minute inference time for complex models",
+          "No ability to handle traffic spikes",
+          "Manual model deployment taking days"
+        ]
+      },
+      "approach": {
+        "description": "We redesigned their ML infrastructure for efficiency, implementing intelligent caching and auto-scaling to dramatically reduce costs.",
+        "phases": [
+          {
+            "name": "Infrastructure Audit (Week 1-2)",
+            "activities": ["Cost analysis", "Performance profiling", "Architecture review"]
+          },
+          {
+            "name": "Optimization (Weeks 3-8)",
+            "activities": [
+              "Model optimization",
+              "Intelligent caching layer",
+              "Auto-scaling implementation"
+            ]
+          },
+          {
+            "name": "Automation (Weeks 9-12)",
+            "activities": ["CI/CD for ML models", "A/B testing framework", "Cost monitoring"]
+          }
+        ]
+      },
+      "results": {
+        "description": "NeuralFlow now serves 100K+ predictions daily at 70% lower cost with 50ms average latency.",
+        "metrics": [
+          { "label": "Daily Predictions", "value": "100K+", "change": "+9,900%" },
+          { "label": "Infrastructure Cost", "value": "$8K/mo", "change": "-70%" },
+          { "label": "Inference Time", "value": "50ms", "change": "-99.7%" },
+          { "label": "Deployment Time", "value": "10 min", "change": "-99%" }
+        ],
+        "testimonial": {
+          "quote": "Drexus turned our biggest weakness into our competitive advantage. Our infrastructure costs are now 10x lower than competitors while being 100x faster.",
+          "author": "Dr. James Liu",
+          "title": "Founder & CEO",
+          "company": "NeuralFlow AI"
+        }
+      },
+      "stack": {
+        "ml": ["PyTorch", "TensorFlow", "ONNX"],
+        "infrastructure": ["Kubernetes", "Ray", "Triton"],
+        "data": ["Apache Kafka", "Redis", "S3"],
+        "monitoring": ["Prometheus", "Grafana", "MLflow"]
+      },
+      "timeline": "3 months",
+      "teamSize": "3-4 engineers",
+      "services": ["ML Infrastructure", "Cost Optimization", "Performance Engineering"],
+      "outcomes": [
+        "Reduced infrastructure costs by 70%",
+        "Improved inference speed by 99.7%",
+        "Enabled 100x growth in predictions",
+        "Automated model deployment process"
+      ]
+    }
+  ]
+}

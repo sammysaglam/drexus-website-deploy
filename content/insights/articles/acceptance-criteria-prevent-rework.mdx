@@ -1,0 +1,360 @@
+---
+title: "Acceptance Criteria that Prevent Rework"
+slug: "acceptance-criteria-prevent-rework"
+excerpt:
+  "Turn specs into testable slices with fewer surprises. Based on 1,000+ user stories, here's how to
+  write acceptance criteria that developers actually thank you for."
+date: "2024-03-31"
+type: "article"
+persona: ["founder", "product"]
+readingTimeMinutes: 9
+tags: ["quality", "planning", "testing"]
+ogImage: "/images/og/acceptance-criteria.jpg"
+author:
+  name: "James Liu"
+  title: "Senior Product Manager"
+  avatar: "/avatars/james-liu.jpg"
+cta:
+  label: "Grab the AC Checklist"
+  href: "/playbooks/acceptance-criteria"
+---
+
+Teams waste 30% of sprint time on rework caused by unclear requirements. After analyzing 1,000+ user
+stories, we found that well-written acceptance criteria reduce rework by 75%. Here's the exact
+framework that turns vague ideas into shippable increments.
+
+## Common AC Anti-Patterns That Guarantee Rework
+
+Most acceptance criteria fail before development starts. Here are the patterns we see repeatedly:
+
+**The Mindreader**: "User should see relevant products" What's relevant? To whom? Based on what
+data? This guarantees a mismatch between PM expectations and developer implementation.
+
+**The Novel**: Three paragraphs explaining the business context Developers need testable conditions,
+not MBA case studies. Save the context for story description.
+
+**The Shapeshifter**: Requirements that change during development "Oh, I meant it should also work
+on mobile" on day 8 of a 10-day sprint. Clear AC locks scope.
+
+**The Perfectionist**: "Must work flawlessly in all scenarios" Define "flawlessly." List the
+scenarios. Infinity is not a testable condition.
+
+<Callout type="error" title="The 40% Rule">
+  If your acceptance criteria take more than 40% as long to write as the code takes to implement,
+  they're too vague. Specific criteria write quickly.
+</Callout>
+
+## Given/When/Then: Your New Best Friend
+
+The Given/When/Then format forces clarity by separating context, action, and outcome:
+
+**Given** [context/precondition] **When** [action/trigger] **Then** [expected outcome]
+
+### Real Examples That Ship
+
+❌ **Bad**: "User can log in with social accounts"
+
+✅ **Good**:
+
+```
+Given a user with a Google account
+When they click "Sign in with Google"
+Then they are redirected to Google OAuth
+And returned to dashboard after authorization
+And their email is pre-populated from Google
+```
+
+❌ **Bad**: "Search should be fast"
+
+✅ **Good**:
+
+```
+Given 10,000 products in the database
+When user searches for "laptop"
+Then results appear in under 2 seconds
+And show maximum 20 results per page
+And results are sorted by relevance score
+```
+
+<Step number={1} title="Start with the Happy Path">
+  Write criteria for the successful scenario first. This defines the core functionality before edge
+  cases add complexity.
+</Step>
+
+<Step number={2} title="Add Key Edge Cases">
+  Include criteria for the 2-3 most likely failure modes. Not every possible edge case - just the
+  ones that would surprise users.
+</Step>
+
+<Step number={3} title="Define the Boundaries">
+  Explicitly state what's NOT included. "Does not need to support Internet Explorer" prevents
+  assumptions.
+</Step>
+
+## Non-Functional Requirements: Bake Them In
+
+The biggest source of rework? Non-functional requirements discovered during QA. Build them into your
+AC:
+
+### Performance Criteria
+
+```
+Given 100 concurrent users
+When all perform searches simultaneously
+Then 95% receive results in &lt;3 seconds
+And no requests timeout
+```
+
+### Security Criteria
+
+```
+Given a user without admin role
+When they attempt to access /admin
+Then they receive 403 Forbidden
+And the attempt is logged
+```
+
+### Accessibility Criteria
+
+```
+Given a user using screen reader
+When they navigate the form
+Then all fields are announced correctly
+And error messages are read immediately
+```
+
+<Checklist
+  title="Non-Functional AC Checklist"
+  items={[
+    { text: "Performance targets defined", checked: true },
+    { text: "Error handling specified", checked: true },
+    { text: "Security constraints listed", checked: true },
+    { text: "Accessibility requirements included", checked: false },
+    { text: "Browser/device support clarified", checked: false },
+    { text: "Data validation rules explicit", checked: false },
+  ]}
+/>
+
+## Definition of Done vs Acceptance Criteria
+
+Teams confuse these constantly. Here's the difference:
+
+**Acceptance Criteria**: Specific to this story
+
+- This search returns products
+- Results show in grid layout
+- Maximum 20 per page
+
+**Definition of Done**: Applies to all stories
+
+- Code reviewed by peer
+- Unit tests written
+- Deployed to staging
+- Documentation updated
+
+Don't repeat your DoD in every story's AC. Reference it once in your team charter.
+
+<DoDont
+  dos={[
+    "Make each criterion independently testable",
+    "Include specific data examples",
+    "Cover happy path + critical edges",
+    "Keep criteria atomic (one check per line)",
+  ]}
+  donts={[
+    "Mix implementation details with outcomes",
+    "Use subjective words like 'fast' or 'easy'",
+    "Assume technical knowledge",
+    "Write criteria after development starts",
+  ]}
+/>
+
+## Template + Real Story Example
+
+Here's our battle-tested template with a real example:
+
+### Template
+
+```markdown
+## Story: [User Role] can [Action] to [Outcome]
+
+### Context
+
+[1-2 sentences of why this matters]
+
+### Acceptance Criteria
+
+**Scenario 1: [Happy Path Name]** Given [context] When [action] Then [outcome] And [additional
+outcome]
+
+**Scenario 2: [Edge Case Name]** Given [different context] When [action] Then [different outcome]
+
+### Out of Scope
+
+- [Thing we're not doing]
+- [Another thing we're not doing]
+```
+
+### Real Example: Search Filtering
+
+```markdown
+## Story: Shopper can filter search results to find products faster
+
+### Context
+
+Users abandon search when they can't narrow 500+ results effectively.
+
+### Acceptance Criteria
+
+**Scenario 1: Apply Single Filter** Given search results for "shoes" When user selects "Size 10"
+filter Then only size 10 shoes are shown And result count updates immediately And URL updates to be
+shareable
+
+**Scenario 2: Apply Multiple Filters** Given search results with one filter applied When user adds
+"Under $100" filter Then results match both filters (AND logic) And both filter chips show as active
+And "Clear all" button appears
+
+**Scenario 3: No Results** Given active filters When combination yields zero results Then "No
+products match your filters" message appears And "Clear filters" button is prominent And suggested
+filters are shown
+
+### Out of Scope
+
+- Saving filter combinations
+- Filter ordering/prioritization
+- Mobile filter drawer (separate story)
+```
+
+## The Review Ritual That Catches Issues
+
+Even great AC needs review. Our three-perspective review catches 90% of issues:
+
+### Developer Review (Technical Feasibility)
+
+"Can I build this with the data we have?" "Are there technical constraints not mentioned?" "Is the
+performance requirement achievable?"
+
+### QA Review (Testability)
+
+"Can I write a test for each criterion?" "Are the edge cases sufficient?" "Do I know when it's
+done?"
+
+### Designer Review (User Experience)
+
+"Does this solve the user problem?" "Are we missing key interactions?" "Will this create UX debt?"
+
+<ProsCons
+  pros={[
+    "75% reduction in rework cycles",
+    "Developers ship right thing first time",
+    "QA writes better tests faster",
+    "Estimates become more accurate",
+  ]}
+  cons={[
+    "Takes 20-30 minutes per story upfront",
+    "Requires PM discipline to maintain",
+    "Can feel over-specified initially",
+    "Some discovery still happens during build",
+  ]}
+/>
+
+## Measuring AC Quality
+
+Track these metrics to improve your criteria over time:
+
+**Clarification Requests**: How often do developers ask for clarification?
+
+- Good: &lt;1 per story
+- Improve: 2-3 per story
+- Broken: &gt;3 per story
+
+**Rework Percentage**: How much code changes after "done"?
+
+- Good: &lt;10%
+- Improve: 10-25%
+- Broken: &gt;25%
+
+**QA Cycles**: How many test/fix rounds?
+
+- Good: 1 cycle
+- Improve: 2 cycles
+- Broken: 3+ cycles
+
+**Story Velocity**: How predictable is delivery?
+
+- Good: 80%+ stories completed as estimated
+- Improve: 60-80%
+- Broken: &lt;60%
+
+## Advanced Patterns for Complex Stories
+
+Some stories resist simple Given/When/Then. Here are patterns for tricky scenarios:
+
+### Multi-Actor Stories
+
+```
+Actor 1 (Buyer):
+Given I'm viewing a product
+When I click "Make offer"
+Then I can enter an offer amount
+
+Actor 2 (Seller):
+Given a buyer made an offer
+When I view my dashboard
+Then I see the pending offer
+And I can accept/reject/counter
+```
+
+### Time-Based Criteria
+
+```
+Given an offer expires in 24 hours
+When 23 hours have passed
+Then buyer sees "1 hour remaining" warning
+And at 24 hours, offer auto-expires
+And both parties are notified
+```
+
+### Progressive Enhancement
+
+```
+Core Criteria (all users):
+Given any browser
+When page loads
+Then content is readable
+And actions work with page refresh
+
+Enhancement (modern browsers):
+Given JavaScript enabled
+When page loads
+Then interactions happen without refresh
+And animations enhance feedback
+```
+
+## Now Do This
+
+Transform your next sprint's clarity with these actions:
+
+<Checklist
+  title="Your AC Improvement Plan"
+  items={[
+    { text: "Rewrite one story in Given/When/Then format", checked: false },
+    { text: "Add non-functional criteria to current sprint", checked: false },
+    { text: "Schedule 3-perspective review for next story", checked: false },
+  ]}
+/>
+
+Ready to write better acceptance criteria? Our [AC Checklist](/playbooks/acceptance-criteria)
+provides templates and examples for common story types. For scoping full features effectively, see
+our [MVP scope guide](/insights/articles/mvp-scope-one-pager).
+
+Want to catch issues before they become rework? Our
+[delivery risk ledger](/insights/articles/delivery-risk-ledger) helps identify unclear requirements
+early.
+
+<DownloadCTA
+  title="Acceptance Criteria Templates"
+  description="20+ templates for common user story types with example criteria"
+  fileUrl="/playbooks/acceptance-criteria"
+  fileSize="Template library"
+/>

@@ -1,0 +1,212 @@
+{
+  "pressReleases": [
+    {
+      "id": "series-a-funding",
+      "slug": "drexus-raises-15m-series-a-accelerate-growth",
+      "title": "Drexus Raises $15M Series A to Accelerate Growth in Enterprise Software Development",
+      "subtitle": "Funding led by Index Ventures will expand team and accelerate international expansion",
+      "date": "2024-03-15",
+      "location": "Zurich, Switzerland",
+      "category": "funding",
+      "featured": true,
+      "summary": "Drexus, the enterprise software development consultancy, today announced $15 million in Series A funding led by Index Ventures with participation from existing investors. The funding will be used to expand the team, enhance service offerings, and accelerate international growth.",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Drexus has experienced 300% year-over-year growth, driven by demand from enterprises seeking to accelerate their digital transformation initiatives. The company's unique approach combines strategic consulting with hands-on development, enabling clients to move from concept to production 60% faster than traditional approaches."
+        },
+        {
+          "type": "quote",
+          "content": "Drexus has cracked the code on enterprise software delivery. Their combination of strategic insight and execution excellence is exactly what modern enterprises need.",
+          "author": "Sarah Chen",
+          "title": "Partner, Index Ventures"
+        },
+        {
+          "type": "paragraph",
+          "content": "The funding comes as Drexus expands its footprint across Europe and North America, with new offices planned in London and New York. The company has grown from 12 to 45 employees in the past year and plans to double its team by the end of 2024."
+        },
+        {
+          "type": "heading",
+          "content": "Key Growth Metrics"
+        },
+        {
+          "type": "list",
+          "items": [
+            "300% year-over-year revenue growth",
+            "100% client retention rate",
+            "45 employees across 3 offices",
+            "$50M+ in client value delivered"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": "\"This investment validates our vision of transforming how enterprises build software,\" said Thomas Müller, CEO and Co-founder of Drexus. \"We're not just consultants or developers – we're partners who take ownership of outcomes. This funding allows us to bring that approach to more companies worldwide.\""
+        }
+      ],
+      "boilerplate": "Drexus is a leading enterprise software development consultancy that helps companies build better software faster. Founded in 2020, the company serves Fortune 500 companies and high-growth startups across Europe and North America.",
+      "contacts": [
+        {
+          "name": "Emma Watson",
+          "title": "Head of Communications",
+          "email": "press@drexus.com",
+          "phone": "+41 44 123 4567"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Executive Headshots",
+          "type": "images",
+          "url": "/newsroom/assets/executive-headshots.zip"
+        },
+        {
+          "title": "Company Logos",
+          "type": "logos",
+          "url": "/newsroom/assets/drexus-logos.zip"
+        }
+      ]
+    },
+    {
+      "id": "partnership-microsoft",
+      "slug": "drexus-microsoft-azure-partnership",
+      "title": "Drexus Announces Strategic Partnership with Microsoft Azure",
+      "subtitle": "Partnership enables faster cloud migrations and AI implementations for enterprise clients",
+      "date": "2024-02-20",
+      "location": "Zurich, Switzerland",
+      "category": "partnership",
+      "featured": true,
+      "summary": "Drexus today announced a strategic partnership with Microsoft Azure to deliver enhanced cloud and AI solutions to enterprise clients. The partnership includes technical training, joint go-to-market initiatives, and preferential access to Azure AI services.",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "As a Microsoft Gold Partner, Drexus will have early access to Azure's latest AI and cloud technologies, enabling clients to leverage cutting-edge solutions for their digital transformation initiatives."
+        },
+        {
+          "type": "quote",
+          "content": "Drexus brings deep technical expertise and a proven track record of successful enterprise implementations. This partnership will help our mutual clients accelerate their cloud journey.",
+          "author": "Michael Richards",
+          "title": "VP Partner Ecosystem, Microsoft Azure"
+        },
+        {
+          "type": "heading",
+          "content": "Partnership Benefits"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Dedicated Azure technical support team",
+            "Early access to preview features",
+            "Joint solution development",
+            "Co-marketing opportunities",
+            "Preferential pricing for clients"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": "The partnership has already yielded results, with three major enterprises completing successful Azure migrations in record time. Drexus's expertise in cloud architecture combined with Azure's robust platform creates a powerful solution for companies looking to modernize their infrastructure."
+        }
+      ],
+      "boilerplate": "Drexus is a leading enterprise software development consultancy that helps companies build better software faster. Founded in 2020, the company serves Fortune 500 companies and high-growth startups across Europe and North America.",
+      "contacts": [
+        {
+          "name": "Emma Watson",
+          "title": "Head of Communications",
+          "email": "press@drexus.com",
+          "phone": "+41 44 123 4567"
+        }
+      ]
+    },
+    {
+      "id": "soc2-certification",
+      "slug": "drexus-achieves-soc2-type2-certification",
+      "title": "Drexus Achieves SOC 2 Type II Certification",
+      "subtitle": "Certification demonstrates commitment to security and data protection for enterprise clients",
+      "date": "2024-01-10",
+      "location": "Zurich, Switzerland",
+      "category": "company",
+      "featured": false,
+      "summary": "Drexus announced today that it has successfully completed its SOC 2 Type II audit, demonstrating the company's commitment to maintaining the highest standards of security and data protection.",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "The SOC 2 Type II certification, conducted by Ernst & Young, validates Drexus's controls and processes for security, availability, processing integrity, confidentiality, and privacy. This achievement is particularly important for enterprise clients in regulated industries."
+        },
+        {
+          "type": "quote",
+          "content": "Security isn't just a checkbox for us – it's fundamental to how we operate. This certification reflects our ongoing commitment to protecting our clients' most sensitive data and intellectual property.",
+          "author": "David Kumar",
+          "title": "CTO, Drexus"
+        },
+        {
+          "type": "paragraph",
+          "content": "The certification process involved a comprehensive audit of Drexus's systems and processes over a six-month period. The company achieved compliance without any exceptions, a testament to its robust security infrastructure and practices."
+        }
+      ],
+      "boilerplate": "Drexus is a leading enterprise software development consultancy that helps companies build better software faster. Founded in 2020, the company serves Fortune 500 companies and high-growth startups across Europe and North America.",
+      "contacts": [
+        {
+          "name": "Emma Watson",
+          "title": "Head of Communications",
+          "email": "press@drexus.com",
+          "phone": "+41 44 123 4567"
+        }
+      ]
+    },
+    {
+      "id": "london-office",
+      "slug": "drexus-opens-london-office",
+      "title": "Drexus Opens London Office to Serve Growing UK Client Base",
+      "subtitle": "New office will house 20 employees and serve as European expansion hub",
+      "date": "2023-11-15",
+      "location": "London, United Kingdom",
+      "category": "expansion",
+      "featured": false,
+      "summary": "Drexus today announced the opening of its London office, marking the company's first expansion outside of Switzerland. The new office will serve the growing UK client base and act as a hub for European operations.",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Located in the heart of Shoreditch, the new 5,000 square foot office will initially house 20 employees across engineering, design, and client services. The company plans to grow the London team to 50 by the end of 2024."
+        },
+        {
+          "type": "quote",
+          "content": "London is a natural next step for Drexus. The city's vibrant tech ecosystem and proximity to our European clients make it an ideal location for our expansion.",
+          "author": "Thomas Müller",
+          "title": "CEO, Drexus"
+        },
+        {
+          "type": "paragraph",
+          "content": "The London office has already secured partnerships with several FTSE 100 companies and is actively recruiting senior engineers and product strategists. The expansion is part of Drexus's broader European growth strategy, with additional offices planned for Berlin and Paris."
+        }
+      ],
+      "boilerplate": "Drexus is a leading enterprise software development consultancy that helps companies build better software faster. Founded in 2020, the company serves Fortune 500 companies and high-growth startups across Europe and North America.",
+      "contacts": [
+        {
+          "name": "Emma Watson",
+          "title": "Head of Communications",
+          "email": "press@drexus.com",
+          "phone": "+44 20 1234 5678"
+        }
+      ]
+    }
+  ],
+  "mediaContacts": [
+    {
+      "name": "Emma Watson",
+      "title": "Head of Communications",
+      "email": "emma.watson@drexus.com",
+      "phone": "+41 44 123 4567",
+      "bio": "Emma leads global communications for Drexus. She has 10+ years of experience in technology PR and previously led communications at several high-growth startups.",
+      "photo": "/images/team/emma-watson.jpg",
+      "regions": ["Global", "EMEA"]
+    },
+    {
+      "name": "John Mitchell",
+      "title": "Communications Manager, Americas",
+      "email": "john.mitchell@drexus.com",
+      "phone": "+1 415 123 4567",
+      "bio": "John manages communications for Drexus in North and South America. He specializes in enterprise technology and has extensive media relationships across the region.",
+      "photo": "/images/team/john-mitchell.jpg",
+      "regions": ["Americas"]
+    }
+  ]
+}
+
