@@ -1,0 +1,245 @@
+{
+  "jobs": [
+    {
+      "id": "senior-react-engineer",
+      "title": "Senior React Engineer",
+      "department": "Engineering",
+      "location": "Zurich, Switzerland",
+      "type": "Full-time",
+      "level": "Senior",
+      "remote": "Hybrid",
+      "salary": {
+        "min": 120000,
+        "max": 160000,
+        "currency": "CHF"
+      },
+      "summary": "Join our team as a Senior React Engineer and help build scalable, performant web applications for our clients.",
+      "description": "We're looking for an experienced React engineer who can lead complex frontend projects and mentor junior developers. You'll work directly with clients to understand their needs and translate them into elegant, maintainable solutions.",
+      "responsibilities": [
+        "Lead frontend architecture decisions for client projects",
+        "Build reusable component libraries and design systems",
+        "Mentor junior developers and conduct code reviews",
+        "Collaborate with designers to implement pixel-perfect UIs",
+        "Optimize application performance and accessibility",
+        "Participate in client meetings and technical discovery"
+      ],
+      "requirements": [
+        "5+ years of React experience",
+        "Expert knowledge of TypeScript",
+        "Experience with Next.js and SSR/SSG",
+        "Strong understanding of web performance optimization",
+        "Excellent communication skills in English",
+        "Experience working directly with clients"
+      ],
+      "niceToHave": [
+        "Experience with React Native",
+        "Contributions to open source projects",
+        "Experience with design systems",
+        "German language skills"
+      ],
+      "benefits": [
+        "Competitive salary and equity",
+        "Flexible working hours",
+        "Professional development budget",
+        "Health insurance",
+        "30 days vacation",
+        "Modern office in central Zurich"
+      ],
+      "posted": "2024-04-15",
+      "status": "active"
+    },
+    {
+      "id": "product-strategist",
+      "title": "Product Strategist",
+      "department": "Product",
+      "location": "Zurich, Switzerland",
+      "type": "Full-time",
+      "level": "Mid-Senior",
+      "remote": "Hybrid",
+      "salary": {
+        "min": 110000,
+        "max": 140000,
+        "currency": "CHF"
+      },
+      "summary": "Help our clients define and execute product strategies that drive business growth.",
+      "description": "As a Product Strategist at Drexus, you'll work with founders and product leaders to shape product vision, validate ideas, and create actionable roadmaps. You'll combine strategic thinking with hands-on execution to deliver meaningful outcomes.",
+      "responsibilities": [
+        "Lead product discovery and user research",
+        "Develop product strategies and roadmaps",
+        "Facilitate workshops with client stakeholders",
+        "Create and validate product hypotheses",
+        "Define success metrics and tracking",
+        "Bridge business goals with technical implementation"
+      ],
+      "requirements": [
+        "3+ years in product management or strategy",
+        "Experience with B2B SaaS products",
+        "Strong analytical and problem-solving skills",
+        "Excellent presentation and facilitation skills",
+        "Ability to work with technical teams",
+        "Fluent English required"
+      ],
+      "niceToHave": [
+        "Consulting experience",
+        "Technical background",
+        "Experience with AI/ML products",
+        "Multiple language skills"
+      ],
+      "benefits": [
+        "Competitive compensation",
+        "Learning & development opportunities",
+        "Flexible work arrangements",
+        "International project exposure",
+        "Mentorship from senior strategists",
+        "Annual strategy conference attendance"
+      ],
+      "posted": "2024-04-10",
+      "status": "active"
+    },
+    {
+      "id": "devops-engineer",
+      "title": "DevOps Engineer",
+      "department": "Engineering",
+      "location": "Remote (Europe)",
+      "type": "Full-time",
+      "level": "Mid-Senior",
+      "remote": "Full",
+      "salary": {
+        "min": 80000,
+        "max": 120000,
+        "currency": "EUR"
+      },
+      "summary": "Build and maintain infrastructure that powers applications serving millions of users.",
+      "description": "We're seeking a DevOps engineer who can design and implement robust, scalable infrastructure solutions. You'll work across multiple client projects, ensuring reliability, security, and performance.",
+      "responsibilities": [
+        "Design and implement CI/CD pipelines",
+        "Manage cloud infrastructure (AWS, GCP, Azure)",
+        "Implement monitoring and alerting systems",
+        "Ensure security best practices",
+        "Automate deployment processes",
+        "Support incident response and resolution"
+      ],
+      "requirements": [
+        "3+ years of DevOps experience",
+        "Strong knowledge of Kubernetes and Docker",
+        "Experience with Infrastructure as Code (Terraform)",
+        "Proficiency in scripting (Python, Bash)",
+        "Understanding of security best practices",
+        "EU work authorization required"
+      ],
+      "niceToHave": [
+        "Cloud certifications",
+        "Experience with GitOps",
+        "Knowledge of observability tools",
+        "Experience with multi-cloud environments"
+      ],
+      "benefits": [
+        "Fully remote position",
+        "Flexible hours across EU timezones",
+        "Home office equipment budget",
+        "Professional certification support",
+        "Quarterly team meetups",
+        "Health & wellness stipend"
+      ],
+      "posted": "2024-04-08",
+      "status": "active"
+    },
+    {
+      "id": "junior-designer",
+      "title": "Junior Product Designer",
+      "department": "Design",
+      "location": "Zurich, Switzerland",
+      "type": "Full-time",
+      "level": "Junior",
+      "remote": "Hybrid",
+      "salary": {
+        "min": 70000,
+        "max": 90000,
+        "currency": "CHF"
+      },
+      "summary": "Start your design career working on diverse projects with experienced mentors.",
+      "description": "This is an excellent opportunity for a talented junior designer to grow their skills across various industries and project types. You'll receive mentorship from senior designers while contributing to real client projects.",
+      "responsibilities": [
+        "Create wireframes and high-fidelity designs",
+        "Collaborate with developers on implementation",
+        "Participate in user research sessions",
+        "Maintain design systems and component libraries",
+        "Present design concepts to teams",
+        "Learn and apply design best practices"
+      ],
+      "requirements": [
+        "Portfolio demonstrating strong design skills",
+        "Proficiency in Figma",
+        "Basic understanding of web/mobile design patterns",
+        "Strong attention to detail",
+        "Eagerness to learn and receive feedback",
+        "Good English communication skills"
+      ],
+      "niceToHave": [
+        "Degree in design or related field",
+        "Basic HTML/CSS knowledge",
+        "Experience with design systems",
+        "Interest in accessibility"
+      ],
+      "benefits": [
+        "Structured mentorship program",
+        "Design conference attendance",
+        "Latest design tools and equipment",
+        "Flexible working hours",
+        "Central Zurich office location",
+        "Rapid career progression"
+      ],
+      "posted": "2024-04-05",
+      "status": "active"
+    },
+    {
+      "id": "technical-project-manager",
+      "title": "Technical Project Manager",
+      "department": "Operations",
+      "location": "Zurich, Switzerland",
+      "type": "Full-time",
+      "level": "Senior",
+      "remote": "Hybrid",
+      "salary": {
+        "min": 130000,
+        "max": 170000,
+        "currency": "CHF"
+      },
+      "summary": "Lead complex technical projects and ensure successful delivery for our enterprise clients.",
+      "description": "We need an experienced Technical Project Manager who can handle multiple concurrent projects, manage stakeholder expectations, and ensure on-time, on-budget delivery. Technical background required to effectively communicate with engineering teams.",
+      "responsibilities": [
+        "Manage 3-5 concurrent client projects",
+        "Create and maintain project plans and timelines",
+        "Facilitate communication between clients and teams",
+        "Identify and mitigate project risks",
+        "Ensure quality standards are met",
+        "Report on project status and metrics"
+      ],
+      "requirements": [
+        "5+ years of technical project management",
+        "PMP or equivalent certification preferred",
+        "Software development background",
+        "Experience with agile methodologies",
+        "Excellent stakeholder management skills",
+        "Fluent in English and German"
+      ],
+      "niceToHave": [
+        "Consulting experience",
+        "Knowledge of multiple tech stacks",
+        "Experience with enterprise clients",
+        "Change management experience"
+      ],
+      "benefits": [
+        "Leadership position with growth potential",
+        "Work on diverse, challenging projects",
+        "Executive exposure",
+        "Comprehensive health benefits",
+        "Annual bonus based on performance",
+        "Sabbatical option after 3 years"
+      ],
+      "posted": "2024-04-01",
+      "status": "active"
+    }
+  ]
+}
+
