@@ -1,0 +1,89 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/Font <<
+/F1 4 0 R
+>>
+>>
+/MediaBox [0 0 612 792]
+/Contents 5 0 R
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+5 0 obj
+<<
+/Length 1074
+>>
+stream
+BT
+/F1 24 Tf
+100 700 Td
+(2025 Software Delivery Playbook) Tj
+0 -30 Td
+/F1 16 Tf
+(From MVP to Reliable Throughput) Tj
+0 -50 Td
+/F1 12 Tf
+(Strategic Intelligence Report - Drexus) Tj
+0 -50 Td
+(Executive Summary) Tj
+0 -30 Td
+/F1 10 Tf
+(The gap between software delivery leaders and laggards continues to widen.) Tj
+0 -15 Td
+(Our analysis of 200+ enterprise transformations reveals that top performers) Tj
+0 -15 Td
+(ship 47x more frequently while maintaining higher quality and lower burnout.) Tj
+0 -30 Td
+(Key Findings:) Tj
+0 -15 Td
+(- Deployment Frequency: 47x gap between leaders and laggards) Tj
+0 -15 Td
+(- Lead Time: <1 day from commit to production for elites) Tj
+0 -15 Td
+(- MTTR: <1 hour recovery time for top performers) Tj
+0 -30 Td
+(This is a preview document. For the complete 128-page report,) Tj
+0 -15 Td
+(please visit drexus.com/insights/special-reports) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000249 00000 n 
+0000000327 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+1452
+%%EOF
