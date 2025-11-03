@@ -1,0 +1,507 @@
+"use client";
+
+import React, { useState } from "react";
+
+import {
+  Button,
+  Card,
+  CardBody,
+  Input,
+  Select,
+  SelectItem,
+  Textarea,
+  useDisclosure,
+} from "@heroui/react";
+
+import { EmailCaptureModal } from "@/components/tools/EmailCaptureModal";
+import { PageHeader } from "@/components/ui/PageHeader";
+import { track } from "@/lib/analytics";
+import { ROLE_OPTIONS, COMPANY_SIZE_OPTIONS, INDUSTRY_OPTIONS } from "@/lib/constants";
+
+interface Feature {
+  id: string;
+  name: string;
+  description: string;
+  priority: "must-have" | "nice-to-have" | "cut";
+  effort: "small" | "medium" | "large";
+  acceptanceCriteria: string;
+}
+
+const priorityLabels = {
+  "must-have": "Must Have (MVP)",
+  "nice-to-have": "Nice to Have (V2)",
+  cut: "Cut (Future)",
+};
+
+const effortLabels = {
+  small: "< 1 week",
+  medium: "1-2 weeks",
+  large: "> 2 weeks",
+};
+
+// Use standardized constants
+const roles = ROLE_OPTIONS;
+const companySizes = COMPANY_SIZE_OPTIONS;
+const industries = INDUSTRY_OPTIONS;
+
+export default function MVPScopeBuilderPage() {
+  const breadcrumbs = [
+    { label: "Home", href: "/" },
+    { label: "Tools", href: "/tools" },
+    { label: "MVP Scope Builder", href: "/tools/mvp-scope-builder" },
+  ];
+
+  const [projectName, setProjectName] = useState("");
+  const [projectDescription, setProjectDescription] = useState("");
+  const [targetPersona, setTargetPersona] = useState("");
+  const [successMetric, setSuccessMetric] = useState("");
+  const [features, setFeatures] = useState<Feature[]>([]);
+  const [showResults, setShowResults] = useState(false);
+  const [industry, setIndustry] = useState("");
+  const [companySize, setCompanySize] = useState("");
+  const [role, setRole] = useState("");
+
+  const emailModal = useDisclosure();
+
+  const addFeature = () => {
+    const newFeature: Feature = {
+      id: Date.now().toString(),
+      name: "",
+      description: "",
+      priority: "must-have",
+      effort: "medium",
+      acceptanceCriteria: "",
+    };
+    setFeatures([...features, newFeature]);
+  };
+
+  const updateFeature = (id: string, updates: Partial<Feature>) => {
+    setFeatures(features.map((f) => (f.id === id ? { ...f, ...updates } : f)));
+  };
+
+  const removeFeature = (id: string) => {
+    setFeatures(features.filter((f) => f.id !== id));
+  };
+
+  const generateScope = () => {
+    if (!projectName || !projectDescription || !targetPersona || !successMetric) {
+      alert("Please fill in all project details");
+      return;
+    }
+    if (features.length === 0) {
+      alert("Please add at least one feature");
+      return;
+    }
+
+    // Find the descriptive values for analytics
+    const selectedRole = roles.find((r) => r.key === role);
+    const selectedCompanySize = companySizes.find((s) => s.key === companySize);
+    const selectedIndustry = industries.find((i) => i.key === industry);
+
+    // Ensure all required values are present
+    if (!selectedRole || !selectedCompanySize || !selectedIndustry) {
+      console.error("Missing required field data");
+      return;
+    }
+
+    // Track the generate button click with analytics data
+    track("Executed Marketing Tool", {
+      location: "/tools/mvp-scope-builder",
+      toolName: "MVP Scope Builder",
+      industry: selectedIndustry.value,
+      companySize: selectedCompanySize.value,
+      role: selectedRole.value,
+    });
+
+    setShowResults(true);
+  };
+
+  const calculateTimeline = (features: Feature[]): string => {
+    const weeks = features.reduce((total, feature) => {
+      switch (feature.effort) {
+        case "small":
+          return total + 0.5;
+        case "medium":
+          return total + 1.5;
+        case "large":
+          return total + 3;
+      }
+    }, 0);
+
+    if (weeks <= 4) return "~4 weeks";
+    if (weeks <= 8) return "6-8 weeks";
+    if (weeks <= 12) return "10-12 weeks";
+    return "> 12 weeks (consider reducing scope)";
+  };
+
+  const _handleDownload = () => {
+    // Show email capture modal instead of downloading
+    emailModal.onOpen();
+  };
+
+  if (showResults) {
+    const mustHaveFeatures = features.filter((f) => f.priority === "must-have");
+    const niceToHaveFeatures = features.filter((f) => f.priority === "nice-to-have");
+    const cutFeatures = features.filter((f) => f.priority === "cut");
+
+    return (
+      <>
+        <PageHeader
+          title="Your MVP Scope is Ready"
+          subtitle="Review your scope and get access to more tools"
+          breadcrumbs={breadcrumbs}
+        />
+
+        <section className="py-12">
+          <div className="container mx-auto px-6 max-w-screen-lg">
+            <Card className="mb-8">
+              <CardBody className="p-8">
+                <h2 className="text-2xl font-semibold text-navy-900 mb-6">{projectName}</h2>
+
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-lg font-semibold text-navy-800 mb-2">Overview</h3>
+                    <p className="text-gray-600">{projectDescription}</p>
+                    <p className="text-sm text-gray-500 mt-2">
+                      <strong>Target:</strong> {targetPersona} • <strong>Success:</strong>{" "}
+                      {successMetric}
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-navy-800 mb-3">Scope Summary</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div className="bg-green-50 rounded-lg p-4">
+                        <div className="text-3xl font-bold text-green-700">
+                          {mustHaveFeatures.length}
+                        </div>
+                        <div className="text-sm text-green-600">Must-Have Features</div>
+                        <div className="text-xs text-green-500 mt-1">Ship in V1</div>
+                      </div>
+                      <div className="bg-blue-50 rounded-lg p-4">
+                        <div className="text-3xl font-bold text-blue-700">
+                          {niceToHaveFeatures.length}
+                        </div>
+                        <div className="text-sm text-blue-600">Nice-to-Have</div>
+                        <div className="text-xs text-blue-500 mt-1">Defer to V2</div>
+                      </div>
+                      <div className="bg-gray-50 rounded-lg p-4">
+                        <div className="text-3xl font-bold text-gray-700">{cutFeatures.length}</div>
+                        <div className="text-sm text-gray-600">Cut Features</div>
+                        <div className="text-xs text-gray-500 mt-1">Future consideration</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-navy-800 mb-2">Estimated Timeline</h3>
+                    <p className="text-2xl font-bold text-navy-600">
+                      {calculateTimeline(mustHaveFeatures)}
+                    </p>
+                    <p className="text-sm text-gray-500">Based on must-have features only</p>
+                  </div>
+                </div>
+
+                <div className="mt-8 flex gap-4">
+                  {/* <Button
+                    color="primary"
+                    size="lg"
+                    onPress={handleDownload}
+                    startContent={
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                        />
+                      </svg>
+                    }
+                  >
+                    Get Your Results
+                  </Button> */}
+                  <Button variant="bordered" size="lg" onPress={() => setShowResults(false)}>
+                    Edit Scope
+                  </Button>
+                </div>
+              </CardBody>
+            </Card>
+
+            <div className="prose prose-lg max-w-none">
+              <h3>What&apos;s Next?</h3>
+              <ol>
+                <li>Share this scope with your team and stakeholders</li>
+                <li>Get sign-off on the must-have features</li>
+                <li>Create detailed user stories for each feature</li>
+                <li>Set up tracking for your success metric</li>
+                <li>Start with the highest-risk features first</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <EmailCaptureModal
+          isOpen={emailModal.isOpen}
+          onClose={emailModal.onClose}
+          toolName="MVP Scope"
+        />
+      </>
+    );
+  }
+
+  return (
+    <>
+      <PageHeader
+        title="MVP Scope Builder"
+        subtitle="Generate a concise scope document with features, cut-lines, and acceptance criteria"
+        breadcrumbs={breadcrumbs}
+      />
+
+      <section className="py-12">
+        <div className="container mx-auto px-6 max-w-screen-lg">
+          <Card className="mb-8">
+            <CardBody className="p-8">
+              <h2 className="text-xl font-semibold text-navy-900 mb-6">Project Details</h2>
+
+              <div className="space-y-6">
+                <Input
+                  label="Project Name"
+                  placeholder="e.g., Customer Portal MVP"
+                  value={projectName}
+                  onChange={(e) => setProjectName(e.target.value)}
+                  isRequired
+                  description="What are you building?"
+                />
+
+                <Textarea
+                  label="Project Description"
+                  placeholder="Brief description of what this MVP will do..."
+                  value={projectDescription}
+                  onChange={(e) => setProjectDescription(e.target.value)}
+                  isRequired
+                  minRows={2}
+                  description="One paragraph summary of the core value proposition"
+                />
+
+                <Input
+                  label="Target Persona"
+                  placeholder="e.g., SMB Operations Managers"
+                  value={targetPersona}
+                  onChange={(e) => setTargetPersona(e.target.value)}
+                  isRequired
+                  description="Who is your primary user?"
+                />
+
+                <Input
+                  label="Success Metric"
+                  placeholder="e.g., 50% of users complete first workflow"
+                  value={successMetric}
+                  onChange={(e) => setSuccessMetric(e.target.value)}
+                  isRequired
+                  description="How will you measure MVP success?"
+                />
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Select
+                    isRequired
+                    label="Industry"
+                    className="text-black"
+                    placeholder="Select your industry"
+                    selectedKeys={industry ? [industry] : []}
+                    onChange={(e) => setIndustry(e.target.value)}
+                    items={industries.map((industry) => ({
+                      key: industry.key,
+                      label: industry.label,
+                    }))}
+                  >
+                    {(item: { key: string; label: string }) => (
+                      <SelectItem className="text-black" key={item.key}>
+                        {item.label}
+                      </SelectItem>
+                    )}
+                  </Select>
+
+                  <Select
+                    isRequired
+                    label="Company Size"
+                    className="text-black"
+                    placeholder="Select company size"
+                    selectedKeys={companySize ? [companySize] : []}
+                    onChange={(e) => setCompanySize(e.target.value)}
+                    items={companySizes.map((size) => ({ key: size.key, label: size.label }))}
+                  >
+                    {(item: { key: string; label: string }) => (
+                      <SelectItem className="text-black" key={item.key}>
+                        {item.label}
+                      </SelectItem>
+                    )}
+                  </Select>
+                </div>
+
+                <div className="mt-4">
+                  <Select
+                    isRequired
+                    label="Your Role"
+                    className="text-black"
+                    placeholder="Select your role"
+                    selectedKeys={role ? [role] : []}
+                    onChange={(e) => setRole(e.target.value)}
+                    items={roles.map((role) => ({ key: role.key, label: role.label }))}
+                  >
+                    {(item: { key: string; label: string }) => (
+                      <SelectItem className="text-black" key={item.key}>
+                        {item.label}
+                      </SelectItem>
+                    )}
+                  </Select>
+                </div>
+              </div>
+            </CardBody>
+          </Card>
+
+          <Card>
+            <CardBody className="p-8">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-xl font-semibold text-navy-900">Features</h2>
+                <Button
+                  color="primary"
+                  variant="flat"
+                  size="sm"
+                  onPress={addFeature}
+                  startContent={<span>+</span>}
+                >
+                  Add Feature
+                </Button>
+              </div>
+
+              {features.length === 0 ? (
+                <div className="text-center py-12 text-gray-500">
+                  <p className="mb-4">No features added yet</p>
+                  <Button color="primary" onPress={addFeature}>
+                    Add Your First Feature
+                  </Button>
+                </div>
+              ) : (
+                <div className="space-y-6">
+                  {features.map((feature, index) => (
+                    <Card key={feature.id} className="border">
+                      <CardBody className="p-4">
+                        <div className="flex items-start justify-between mb-4">
+                          <h3 className="text-lg font-medium text-navy-800">
+                            Feature #{index + 1}
+                          </h3>
+                          <Button
+                            size="sm"
+                            variant="light"
+                            color="danger"
+                            onPress={() => removeFeature(feature.id)}
+                          >
+                            Remove
+                          </Button>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                          <Input
+                            label="Feature Name"
+                            placeholder="e.g., User Authentication"
+                            value={feature.name}
+                            onChange={(e) => updateFeature(feature.id, { name: e.target.value })}
+                            isRequired
+                          />
+
+                          <div className="grid grid-cols-2 gap-2">
+                            <Select
+                              label="Priority"
+                              selectedKeys={[feature.priority]}
+                              onChange={(e) =>
+                                updateFeature(feature.id, {
+                                  priority: e.target.value as Feature["priority"],
+                                })
+                              }
+                              isRequired
+                              items={Object.entries(priorityLabels).map(([value, label]) => ({
+                                key: value,
+                                label,
+                              }))}
+                            >
+                              {(item: { key: string; label: string }) => (
+                                <SelectItem className="text-black" key={item.key}>
+                                  {item.label}
+                                </SelectItem>
+                              )}
+                            </Select>
+
+                            <Select
+                              label="Effort"
+                              selectedKeys={[feature.effort]}
+                              onChange={(e) =>
+                                updateFeature(feature.id, {
+                                  effort: e.target.value as Feature["effort"],
+                                })
+                              }
+                              isRequired
+                              items={Object.entries(effortLabels).map(([value, label]) => ({
+                                key: value,
+                                label,
+                              }))}
+                            >
+                              {(item: { key: string; label: string }) => (
+                                <SelectItem className="text-black" key={item.key}>
+                                  {item.label}
+                                </SelectItem>
+                              )}
+                            </Select>
+                          </div>
+                        </div>
+
+                        <Textarea
+                          label="Description"
+                          placeholder="What does this feature do?"
+                          value={feature.description}
+                          onChange={(e) =>
+                            updateFeature(feature.id, { description: e.target.value })
+                          }
+                          isRequired
+                          minRows={2}
+                          className="mb-4"
+                        />
+
+                        <Textarea
+                          label="Acceptance Criteria"
+                          placeholder="Enter criteria, one per line"
+                          value={feature.acceptanceCriteria}
+                          onChange={(e) =>
+                            updateFeature(feature.id, { acceptanceCriteria: e.target.value })
+                          }
+                          isRequired
+                          minRows={3}
+                          description="What must be true for this feature to be complete?"
+                        />
+                      </CardBody>
+                    </Card>
+                  ))}
+                </div>
+              )}
+
+              <div className="mt-8 flex justify-center">
+                <Button
+                  color="primary"
+                  size="lg"
+                  onPress={generateScope}
+                  isDisabled={features.length === 0}
+                >
+                  Generate MVP Scope
+                </Button>
+              </div>
+            </CardBody>
+          </Card>
+        </div>
+      </section>
+    </>
+  );
+}

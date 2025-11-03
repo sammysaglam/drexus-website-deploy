@@ -1,0 +1,605 @@
+@import "tailwindcss";
+@plugin './hero.ts';
+/* Note: You may need to change the path to fit your project structure */
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+
+/* Trust Icons Scroll Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+@keyframes scroll-seamless {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.animate-scroll-seamless {
+  animation: scroll-seamless 40s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+.animate-scroll-seamless:hover {
+  animation-play-state: paused;
+}
+
+/* Responsive scroll speed */
+@media (max-width: 640px) {
+  .animate-scroll {
+    animation-duration: 25s;
+  }
+  .animate-scroll-seamless {
+    animation-duration: 30s;
+  }
+}
+
+@media (min-width: 1024px) {
+  .animate-scroll {
+    animation-duration: 35s;
+  }
+  .animate-scroll-seamless {
+    animation-duration: 50s;
+  }
+}
+
+/* Corporate color palette */
+:root {
+  /* Drexus Corporate Colors */
+  --color-navy-900: #081534;
+  --color-navy-800: #0c2247;
+  --color-navy-700: #102951;
+  --color-navy-600: #14315b;
+  --color-blue-600: #1d4ed8;
+  --color-blue-500: #3b82f6;
+  --color-blue-400: #60a5fa;
+  --color-gray-900: #111827;
+  --color-gray-800: #1f2937;
+  --color-gray-700: #374151;
+  --color-gray-600: #4b5563;
+  --color-gray-500: #6b7280;
+  --color-gray-400: #9ca3af;
+  --color-gray-300: #d1d5db;
+  --color-gray-200: #e5e7eb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-50: #f9fafb;
+  --color-white: #ffffff;
+
+  /* Semantic colors */
+  --background: var(--color-white);
+  --foreground: var(--color-gray-900);
+  --primary: var(--color-navy-900);
+  --primary-foreground: var(--color-white);
+  --secondary: var(--color-blue-600);
+  --secondary-foreground: var(--color-white);
+  --muted: var(--color-gray-100);
+  --muted-foreground: var(--color-gray-700);
+  --accent: var(--color-blue-500);
+  --accent-foreground: var(--color-white);
+  --border: var(--color-gray-200);
+  --input: var(--color-gray-100);
+  --ring: var(--color-blue-500);
+  --radius: 0.5rem;
+
+  /* Typography scale */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+
+  /* Line heights */
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+
+  /* Letter spacing */
+  --letter-spacing-tighter: -0.05em;
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+
+  /* Spacing scale */
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-32: 8rem;
+  --spacing-40: 10rem;
+  --spacing-48: 12rem;
+  --spacing-56: 14rem;
+  --spacing-64: 16rem;
+}
+
+@theme inline {
+  /* Map CSS variables to Tailwind */
+  --color-navy-900: var(--color-navy-900);
+  --color-navy-800: var(--color-navy-800);
+  --color-navy-700: var(--color-navy-700);
+  --color-navy-600: var(--color-navy-600);
+  --color-blue-600: var(--color-blue-600);
+  --color-blue-500: var(--color-blue-500);
+  --color-blue-400: var(--color-blue-400);
+  --color-gray-900: var(--color-gray-900);
+  --color-gray-800: var(--color-gray-800);
+  --color-gray-700: var(--color-gray-700);
+  --color-gray-600: var(--color-gray-600);
+  --color-gray-500: var(--color-gray-500);
+  --color-gray-400: var(--color-gray-400);
+  --color-gray-300: var(--color-gray-300);
+  --color-gray-200: var(--color-gray-200);
+  --color-gray-100: var(--color-gray-100);
+  --color-gray-50: var(--color-gray-50);
+  --color-white: var(--color-white);
+
+  /* Font families */
+  --font-family-sans: var(--font-inter);
+  --font-family-serif: var(--font-merriweather);
+  --font-family-mono: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+}
+
+
+/* Base styles */
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  font-feature-settings:
+    "kern" 1,
+    "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography classes */
+.font-sans {
+  font-family: var(--font-family-sans);
+}
+
+.font-serif {
+  font-family: var(--font-family-serif);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: var(--font-family-serif);
+  font-weight: 700;
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.h1,
+h1 {
+  font-size: var(--font-size-5xl);
+  font-weight: 900;
+}
+
+.h2,
+h2 {
+  font-size: var(--font-size-4xl);
+}
+
+.h3,
+h3 {
+  font-size: var(--font-size-3xl);
+}
+
+.h4,
+h4 {
+  font-size: var(--font-size-2xl);
+}
+
+.h5,
+h5 {
+  font-size: var(--font-size-xl);
+}
+
+.h6,
+h6 {
+  font-size: var(--font-size-lg);
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .h1,
+  h1 {
+    font-size: var(--font-size-4xl);
+  }
+
+  .h2,
+  h2 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .h3,
+  h3 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .h4,
+  h4 {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* Global form element font sizes - 16px for all screen sizes */
+input,
+select,
+textarea {
+  font-size: 16px !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  font-size: 16px !important;
+}
+
+/* Focus states for accessibility */
+:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: var(--color-navy-900);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.skip-to-content:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1rem;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Responsive container utilities */
+@media (min-width: 640px) {
+  .sm\:container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: var(--spacing-6);
+    padding-left: var(--spacing-6);
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .sm\:container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sm\:container {
+    max-width: 1024px;
+    padding-right: var(--spacing-8);
+    padding-left: var(--spacing-8);
+  }
+}
+
+@media (min-width: 1280px) {
+  .sm\:container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .sm\:container {
+    max-width: 1536px;
+  }
+}
+
+/* Container styles */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--spacing-6);
+  padding-left: var(--spacing-6);
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding-right: var(--spacing-8);
+    padding-left: var(--spacing-8);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+/* Utility classes for spacing */
+.section-padding {
+  padding-top: var(--spacing-24);
+  padding-bottom: var(--spacing-24);
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: var(--spacing-16);
+    padding-bottom: var(--spacing-16);
+  }
+}
+
+/* Grid system */
+.grid-cols-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--spacing-6);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Link styles */
+a {
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Button base styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3) var(--spacing-6);
+  font-weight: 500;
+  font-size: var(--font-size-base);
+  line-height: 1;
+  border-radius: var(--radius);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Loading states */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Blob animations for hero section */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* iOS Safari zoom prevention for iframes and inputs */
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari specific styles */
+  iframe {
+    font-size: 16px !important;
+    -webkit-text-size-adjust: 100%;
+    -webkit-transform: translateZ(0);
+    zoom: 1;
+    -webkit-zoom: 1;
+  }
+
+  /* Prevent zoom on input focus */
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+    -webkit-text-size-adjust: 100%;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+
+  /* Ensure modal content doesn't trigger zoom */
+  .modal-ontent iframe {
+    font-size: 16px !important;
+    -webkit-text-size-adjust: 100%;
+    zoom: 1;
+    -webkit-zoom: 1;
+  }
+
+  /* Additional prevention for Motion iframe specifically */
+  iframe[src*="usemotion.com"] {
+    font-size: 16px !important;
+    -webkit-text-size-adjust: 100%;
+    -webkit-transform: translateZ(0) scale(1);
+    transform: translateZ(0) scale(1);
+    zoom: 1;
+    -webkit-zoom: 1;
+  }
+
+  /* Prevent zoom on any element that might trigger it */
+  * {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+textarea:focus,
+input:focus {
+  outline: 0 none;
+}
+
+/* Remove blue outline from navbar dropdown items */
+.navbar-dropdown-item:focus,
+.navbar-dropdown-item:focus-visible,
+.navbar-dropdown-item *:focus,
+.navbar-dropdown-item *:focus-visible {
+  outline: 0 none !important;
+  box-shadow: 0 none !important;
+  ring: 0 none !important;
+}
+
+/* Remove blue outline from Link components */
+a:focus,
+a:focus-visible,
+a *:focus,
+a *:focus-visible {
+  outline: 0 none !important;
+  box-shadow: 0 none !important;
+  ring: 0 none !important;
+}
+
+/* Alternative approach - target the specific ring classes used in NavMega */
+.ring-2.ring-blue-500.ring-offset-2 {
+  --tw-ring-width: 0px !important;
+  --tw-ring-offset-width: 0px !important;
+  box-shadow: none !important;
+}
+
+/* Better text truncation that respects word boundaries */
+.text-truncate-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}

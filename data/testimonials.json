@@ -1,0 +1,40 @@
+{
+  "testimonials": [
+    {
+      "id": "1",
+      "author": {
+        "name": "Reddit Team",
+        "title": "Engineering Team",
+        "company": "Reddit",
+        "avatar": "/images/testimonials/reddit-team.jpg"
+      },
+      "quote": "From the onset of his service, he was a standout. His engineering rapport was excellent and he was able to successfully launch several impactful features at Reddit. His contributions to the team drove significant impact for the business, increasing several of our core metrics around user contribution.",
+      "role": "cto",
+      "industry": "technology",
+      "useCase": "mvp-development",
+      "featured": true,
+      "metrics": {
+        "timeline": "Ongoing",
+        "outcome": "Increased core metrics"
+      }
+    },
+    {
+      "id": "2",
+      "author": {
+        "name": "Daniel Podsiadlo",
+        "title": "Team Lead",
+        "company": "Goldman Sachs",
+        "avatar": "/images/testimonials/daniel-podsiadlo.jpg"
+      },
+      "quote": "Exceptional expertise and professionalism in software development. Knowledgeable, responsive, and consistently delivers value that drives business growth. Their commitment to client success is truly impressive.",
+      "role": "executive",
+      "industry": "fintech",
+      "useCase": "platform-modernization",
+      "featured": true,
+      "metrics": {
+        "timeline": "Ongoing",
+        "outcome": "Business growth"
+      }
+    }
+  ]
+}
