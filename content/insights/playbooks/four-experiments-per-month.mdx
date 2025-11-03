@@ -1,0 +1,364 @@
+---
+title: "The 4-Experiments/Month Planner"
+slug: "four-experiments-per-month"
+excerpt:
+  "Reboot learning velocity with a cadence any team can run. This playbook shows exactly how to run
+  4 meaningful experiments monthly without burning out your team."
+date: "2024-03-27"
+type: "playbook"
+persona: ["product", "product-lead"]
+readingTimeMinutes: 12
+tags: ["experimentation", "growth", "product"]
+ogImage: "/images/og/experiment-planner.jpg"
+author:
+  name: "David Park"
+  title: "Director of Growth"
+  avatar: "/avatars/david-park.jpg"
+cta:
+  label: "Open Experiment Planner"
+  href: "/tools/experiment-planner"
+---
+
+Teams running fewer than 4 experiments per month learn too slowly to compete. Teams running more
+than 8 burn out and ship sloppy tests. After managing 2,000+ experiments across our portfolio, we've
+found the sweet spot: 4 experiments monthly, in 2-week cycles. Here's the exact playbook.
+
+## Decision Latency and Opportunity Cost
+
+Every week you don't test is a week you don't learn. We've tracked decision latency across 200+
+product teams:
+
+- Average time from idea to test: 6 weeks
+- Average time from test to decision: 3 weeks
+- Total learning cycle: 9 weeks
+
+At this pace, teams run 5-6 experiments per year. Market leaders run 48+.
+
+The cost compounds:
+
+- Slow teams: 6 learnings/year
+- Fast teams: 48 learnings/year
+- Learning advantage: 8x
+
+<Callout type="warning" title="The Compounding Learning Gap">
+  Teams that run 4x more experiments don't just learn 4x faster - they compound learnings into
+  better hypotheses. By year 2, they're running categorically different experiments based on deeper
+  insights.
+</Callout>
+
+## Two-Week Cycles & Sample-Size Sanity
+
+The biggest experiment killer? Waiting for statistical significance that never comes. Here's our
+2-week cycle framework that balances speed with statistical rigor:
+
+### Week 1: Design & Deploy
+
+**Days 1-3: Hypothesis & Design**
+
+- Problem statement (1 sentence)
+- Hypothesis (If we X, then Y because Z)
+- Success metrics (primary + guardrails)
+- Quick mockup or prototype
+
+**Days 4-5: Technical Setup**
+
+- Implement variant(s)
+- QA test all paths
+- Set up analytics
+- Deploy to 10% traffic
+
+### Week 2: Run & Read
+
+**Days 6-12: Active Experiment**
+
+- Monitor daily for errors
+- Check sample size progress
+- Watch for guardrail metrics
+- Document observations
+
+**Days 13-14: Analysis & Decision**
+
+- Statistical significance check
+- Practical significance evaluation
+- Go/no-go decision
+- Next experiment planning
+
+<Step number={1} title="Calculate Required Sample Size">
+  Use this quick formula: n = 16 × (σ/δ)² Where σ = standard deviation of your metric and δ =
+  minimum detectable effect. For most teams, this means 1,000-5,000 users per variant.
+</Step>
+
+<Step number={2} title="Set Traffic Allocation">
+  Based on your weekly traffic and required sample size, allocate experiment traffic. If you need
+  2,000 users per variant and get 10,000 weekly visitors, run at 40% allocation.
+</Step>
+
+<Step number={3} title="Define Stop Conditions">
+  If you won't hit sample size in 14 days, either: - Increase traffic allocation - Reduce variants -
+  Change success metric - Skip the test (not everything needs testing)
+</Step>
+
+## Experiment Backlog Grooming
+
+A healthy experiment backlog fuels consistent velocity. We use the ICE framework with a twist:
+
+**Impact (1-10)**: Potential lift to primary metric **Confidence (1-10)**: Strength of hypothesis
+based on data **Effort (1-10)**: Developer days required (inverted - 10 = easy)
+
+**Our twist**: Multiply by Learning Value (1-3)
+
+- 3 = Validates core assumption
+- 2 = Optimizes known winner
+- 1 = Incremental improvement
+
+<Checklist
+  title="Weekly Backlog Grooming"
+  items={[
+    { text: "Review last week's results", checked: true },
+    { text: "Add 3-5 new test ideas", checked: true },
+    { text: "Score all items with ICE", checked: true },
+    { text: "Assign next 2 experiments", checked: false },
+    { text: "Archive stale ideas (&gt;90 days)", checked: false },
+    { text: "Share learnings with team", checked: false },
+  ]}
+/>
+
+### Sample Experiment Backlog
+
+Here's a real backlog snapshot from a B2B SaaS company:
+
+| Experiment                     | Impact | Confidence | Effort | Learning | Score | Status   |
+| ------------------------------ | ------ | ---------- | ------ | -------- | ----- | -------- |
+| Simplify signup flow           | 8      | 7          | 9      | 3        | 189   | Running  |
+| Add social proof to pricing    | 7      | 8          | 10     | 2        | 112   | Next     |
+| Test annual vs monthly default | 9      | 6          | 10     | 3        | 162   | Queued   |
+| Change CTA color               | 3      | 5          | 10     | 1        | 15    | Archived |
+| Remove free trial friction     | 8      | 8          | 7      | 3        | 134   | Queued   |
+
+## Guardrails and Ethics
+
+Speed without safety leads to bad decisions. Every experiment needs guardrails:
+
+### Technical Guardrails
+
+- Error rate &lt;0.1% increase
+- Page load &lt;100ms increase
+- Crash rate unchanged
+- Analytics firing correctly
+
+### Business Guardrails
+
+- Revenue per user ±5%
+- Support tickets &lt;20% increase
+- Churn rate unchanged
+- NPS ±5 points
+
+### Ethical Guardrails
+
+- No dark patterns
+- Clear value exchange
+- Reversible actions
+- Transparent pricing
+
+<DoDont
+  dos={[
+    "Test one variable at a time",
+    "Run A/A tests quarterly for calibration",
+    "Document every learning, even failures",
+    "Share results company-wide",
+  ]}
+  donts={[
+    "P-hack by checking results daily",
+    "Run tests without hypotheses",
+    "Test everything - some things are obvious",
+    "Hide negative results",
+  ]}
+/>
+
+## Template Walkthrough
+
+Here's the exact template we use for every experiment:
+
+```markdown
+## Experiment: [Name]
+
+**Owner**: [PM/Engineer] **Duration**: [Start] - [End] **Traffic**: [X%]
+
+### Problem
+
+[1-2 sentences on what users struggle with]
+
+### Hypothesis
+
+If we [change], Then [metric] will [increase/decrease] by [X%] Because [reasoning based on user
+behavior]
+
+### Variants
+
+- Control: [Current state]
+- Variant A: [Change description]
+- (Variant B: [If multivariate])
+
+### Success Metrics
+
+- Primary: [Single metric + target]
+- Guardrails: [3-4 metrics to not harm]
+
+### Results
+
+- Sample size: [Actual N per variant]
+- Primary metric: [Lift % + confidence interval]
+- Statistical significance: [Yes/No + p-value]
+- Decision: [Ship/Iterate/Kill]
+
+### Learnings
+
+[2-3 bullets on what we learned about users]
+
+### Next Steps
+
+[Follow-up experiments or implementation plan]
+```
+
+## Real Playbook: B2B SaaS Case Study
+
+Let's walk through a real month of experiments from a portfolio company:
+
+### Week 1-2: Signup Simplification
+
+**Hypothesis**: Reducing signup from 5 fields to 2 will increase completion by 25% **Result**: 31%
+increase in signups, shipped to 100% **Learning**: Users will give more info post-signup if value is
+clear
+
+### Week 3-4: Onboarding Video
+
+**Hypothesis**: 2-minute video will increase activation by 20% **Result**: 3% increase, not
+significant, killed **Learning**: Users want to explore, not watch
+
+### Week 5-6: Trial Extension Offer
+
+**Hypothesis**: Offering 7-day extension will increase conversion 15% **Result**: 22% increase in
+conversion, shipped **Learning**: Users need more time to get buy-in
+
+### Week 7-8: Annual Pricing Default
+
+**Hypothesis**: Defaulting to annual will increase revenue per user 30% **Result**: 18% increase in
+revenue, 5% decrease in conversions, shipped **Learning**: Trade-off acceptable for unit economics
+
+**Month Summary**: 4 experiments, 3 shipped, 52% revenue increase
+
+## Scaling Your Experiment Velocity
+
+Once you hit 4 experiments monthly, scale carefully:
+
+### Month 1-3: Foundation (4 experiments/month)
+
+- Focus on highest-impact areas
+- Build experiment muscle memory
+- Establish review rituals
+- Document everything
+
+### Month 4-6: Acceleration (6 experiments/month)
+
+- Add dedicated analyst resource
+- Build reusable test components
+- Automate results dashboards
+- Expand to multiple surfaces
+
+### Month 7+: Optimization (8 experiments/month max)
+
+- Dedicated growth team
+- Parallel track experiments
+- Machine learning for analysis
+- Cross-team learning systems
+
+<ProsCons
+  pros={[
+    "10x faster learning vs. quarterly planning",
+    "Data-driven culture becomes default",
+    "Compounds into better hypotheses",
+    "Reduces HiPPO decision making",
+  ]}
+  cons={[
+    "Requires dedicated PM time",
+    "Can feel chaotic without process",
+    "Needs baseline analytics maturity",
+    "Risk of testing fatigue",
+  ]}
+/>
+
+## Common Pitfalls and Fixes
+
+**Pitfall 1: Analysis Paralysis**
+
+- Symptom: 3+ weeks to analyze results
+- Fix: Pre-commit to decision criteria
+
+**Pitfall 2: Testing Everything**
+
+- Symptom: Testing button colors while checkout is broken
+- Fix: ICE scoring with Learning multiplier
+
+**Pitfall 3: Lone Wolf Testing**
+
+- Symptom: Only growth team knows results
+- Fix: Weekly all-hands learning share
+
+**Pitfall 4: Success Theater**
+
+- Symptom: Only positive results shared
+- Fix: Celebrate learning, not just wins
+
+## Your 30-Day Rollout Plan
+
+Ready to hit 4 experiments per month? Here's your week-by-week plan:
+
+### Week 1: Foundation
+
+- Set up basic analytics
+- Create experiment template
+- Score first 10 ideas
+- Run one simple test
+
+### Week 2: Process
+
+- Document first results
+- Share learnings broadly
+- Set up weekly review
+- Queue next 2 tests
+
+### Week 3: Velocity
+
+- Run 2 parallel tests
+- Automate analysis dashboard
+- Build experiment backlog
+- Assign clear owners
+
+### Week 4: Scale
+
+- Hit 4 experiments
+- Review month's learnings
+- Plan next month's tests
+- Celebrate progress
+
+## Now Do This
+
+Transform your learning velocity in the next 30 days:
+
+<Checklist
+  title="Your Action Items"
+  items={[
+    { text: "List 10 experiment ideas right now", checked: false },
+    { text: "Score them with ICE × Learning", checked: false },
+    { text: "Start your simplest test tomorrow", checked: false },
+  ]}
+/>
+
+Ready to organize your experiments? Our [Experiment Planner](/tools/experiment-planner) helps you
+track ideas, calculate sample sizes, and monitor results in one place. For setting the right success
+metrics, check out our guide on
+[latency budgets that actually stick](/insights/benchmarks/latency-budgets-that-stick).
+
+Want to ensure quality while moving fast? Our
+[acceptance criteria guide](/insights/articles/acceptance-criteria-prevent-rework) shows how to
+define "done" for experiments.

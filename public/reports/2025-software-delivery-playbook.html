@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Software Delivery Playbook - Drexus</title>
+    <style>
+        @media print {
+            body {
+                margin: 0;
+                font-size: 12pt;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #1a202c;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #fff;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 3px solid #0f172a;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #0f172a;
+            letter-spacing: -1px;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #0f172a;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: #475569;
+            font-style: italic;
+        }
+        
+        .meta {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #64748b;
+        }
+        
+        .content {
+            margin-top: 60px;
+        }
+        
+        h2 {
+            font-size: 28px;
+            color: #0f172a;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        
+        h3 {
+            font-size: 20px;
+            color: #1e293b;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .toc {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+        
+        .toc h2 {
+            margin-top: 0;
+        }
+        
+        .toc ol {
+            padding-left: 20px;
+        }
+        
+        .toc li {
+            margin-bottom: 15px;
+            color: #475569;
+        }
+        
+        .stat-box {
+            background: #0f172a;
+            color: white;
+            padding: 40px;
+            margin: 40px -20px;
+            text-align: center;
+        }
+        
+        .stat {
+            display: inline-block;
+            margin: 0 30px;
+        }
+        
+        .stat-value {
+            font-size: 48px;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        .footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 2px solid #e2e8f0;
+            text-align: center;
+            color: #64748b;
+            font-size: 14px;
+        }
+        
+        .download-notice {
+            background: #3b82f6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin: 40px -20px;
+            font-size: 18px;
+        }
+        
+        .download-notice a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        @page {
+            margin: 1in;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">DREXUS</div>
+        <h1>2025 Software Delivery Playbook</h1>
+        <p class="subtitle">From MVP to Reliable Throughput</p>
+        <div class="meta">
+            Strategic Intelligence Report • April 2024 • 128 Pages
+        </div>
+    </div>
+
+    <div class="download-notice no-print">
+        <strong>This is a preview.</strong> For the complete 128-page report with all frameworks and case studies, 
+        <a href="mailto:research@drexus.com?subject=Request%20for%202025%20Software%20Delivery%20Playbook">
+            contact our research team
+        </a>.
+    </div>
+
+    <div class="content">
+        <h2>Executive Summary</h2>
+        <p>
+            The gap between software delivery leaders and laggards continues to widen. Our analysis of 200+ enterprise 
+            transformations reveals that top performers ship 47x more frequently while maintaining higher quality and 
+            lower burnout. This isn't about working harder - it's about fundamental differences in how they organize, 
+            measure, and improve their delivery systems.
+        </p>
+        
+        <p>
+            This playbook distills five years of research into actionable frameworks your team can implement immediately. 
+            Whether you're launching your first MVP or scaling past 100 engineers, you'll find battle-tested strategies 
+            that actually work.
+        </p>
+
+        <div class="stat-box">
+            <div class="stat">
+                <span class="stat-value">47x</span>
+                <span class="stat-label">Deployment Frequency Gap</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">&lt;1 day</span>
+                <span class="stat-label">Elite Lead Time</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">&lt;1 hour</span>
+                <span class="stat-label">Top Performer MTTR</span>
+            </div>
+        </div>
+
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <ol>
+                <li><strong>Module 1: The MVP That Scales</strong><br>
+                    Build your first version without painting yourself into corners</li>
+                <li><strong>Module 2: Velocity Without Burnout</strong><br>
+                    Sustainable speed comes from systems, not heroics</li>
+                <li><strong>Module 3: The Feedback Engine</strong><br>
+                    Turn every release into learning</li>
+                <li><strong>Module 4: Risk-Based Delivery</strong><br>
+                    Ship fearlessly with progressive rollouts</li>
+                <li><strong>Module 5: Scaling Past 50 Engineers</strong><br>
+                    Navigate organizational transitions</li>
+                <li><strong>Module 6: The Measurement Framework</strong><br>
+                    Metrics that drive action, not just visibility</li>
+                <li><strong>Module 7: Future-Proofing Your System</strong><br>
+                    Prepare for what's next without over-engineering</li>
+            </ol>
+        </div>
+
+        <h2>Research Methodology</h2>
+        <p>
+            This playbook synthesizes data from 200+ enterprise transformations, 50,000+ developer surveys, and 
+            longitudinal studies of high-performing teams over 5 years. Our research methodology ensures actionable, 
+            evidence-based recommendations through:
+        </p>
+        <ul>
+            <li>Quantitative analysis of performance data across industries</li>
+            <li>In-depth interviews with 150+ engineering leaders</li>
+            <li>5-year tracking of transformation outcomes</li>
+            <li>Practitioner validation in real environments</li>
+        </ul>
+
+        <h2>Who This Report Is For</h2>
+        <h3>Founders & CEOs</h3>
+        <p>
+            Learn how to build delivery capability that scales with your vision. Understand the early decisions 
+            that compound into competitive advantage or technical debt.
+        </p>
+
+        <h3>Product Leaders</h3>
+        <p>
+            Master the balance between velocity and quality. Discover how elite teams ship continuously without 
+            sacrificing user experience or team sanity.
+        </p>
+
+        <h3>CTOs & VPs of Engineering</h3>
+        <p>
+            Implement systems that turn good engineers into great teams. Get blueprints for architecture, process, 
+            and culture that support sustainable growth.
+        </p>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Drexus, Inc. All rights reserved.</p>
+        <p>This preview represents pages 1-5 of the complete 128-page report.</p>
+        <p>Contact research@drexus.com for the full version.</p>
+    </div>
+</body>
+</html>

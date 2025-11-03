@@ -1,0 +1,126 @@
+{
+  "tools": [
+    {
+      "id": "1",
+      "name": "Technology Radar",
+      "description": "Interactive visualization of emerging technologies categorized by adoption stage and business impact.",
+      "category": "Strategic Planning",
+      "link": "/tools/technology-radar",
+      "icon": "radar",
+      "features": [
+        "Quarterly updates",
+        "Industry-specific views",
+        "Implementation guides",
+        "Risk assessments"
+      ],
+      "accessLevel": "premium"
+    },
+    {
+      "id": "2",
+      "name": "Vendor Comparison Matrix",
+      "description": "Compare technology vendors across multiple criteria with our comprehensive evaluation framework.",
+      "category": "Vendor Management",
+      "link": "/tools/vendor-comparison",
+      "icon": "compare",
+      "features": [
+        "Side-by-side comparisons",
+        "Custom criteria weighting",
+        "Export capabilities",
+        "Peer reviews"
+      ],
+      "accessLevel": "standard"
+    },
+    {
+      "id": "3",
+      "name": "ROI Calculator",
+      "description": "Calculate the return on investment for technology initiatives with industry-specific benchmarks.",
+      "category": "Financial Planning",
+      "link": "/tools/roi-calculator",
+      "icon": "calculator",
+      "features": [
+        "Multiple scenario modeling",
+        "Industry benchmarks",
+        "Sensitivity analysis",
+        "Executive reports"
+      ],
+      "accessLevel": "standard"
+    },
+    {
+      "id": "4",
+      "name": "Digital Maturity Assessment",
+      "description": "Evaluate your organization's digital capabilities and receive personalized recommendations.",
+      "category": "Digital Transformation",
+      "link": "/tools/maturity-assessment",
+      "icon": "assessment",
+      "features": [
+        "Comprehensive evaluation",
+        "Peer comparisons",
+        "Roadmap generation",
+        "Progress tracking"
+      ],
+      "accessLevel": "premium"
+    },
+    {
+      "id": "5",
+      "name": "Risk Assessment Framework",
+      "description": "Identify and prioritize technology risks with our enterprise risk management tool.",
+      "category": "Risk Management",
+      "link": "/tools/risk-assessment",
+      "icon": "shield",
+      "features": [
+        "Risk scoring",
+        "Mitigation strategies",
+        "Compliance mapping",
+        "Dashboard views"
+      ],
+      "accessLevel": "premium"
+    },
+    {
+      "id": "6",
+      "name": "Architecture Decision Records",
+      "description": "Document and track architectural decisions with templates and best practices.",
+      "category": "Enterprise Architecture",
+      "link": "/tools/adr-template",
+      "icon": "document",
+      "features": [
+        "Decision templates",
+        "Version control",
+        "Stakeholder tracking",
+        "Impact analysis"
+      ],
+      "accessLevel": "free"
+    }
+  ],
+  "categories": [
+    {
+      "id": "strategic-planning",
+      "name": "Strategic Planning",
+      "description": "Tools for long-term technology planning and strategy development"
+    },
+    {
+      "id": "vendor-management",
+      "name": "Vendor Management",
+      "description": "Resources for evaluating and managing technology vendors"
+    },
+    {
+      "id": "financial-planning",
+      "name": "Financial Planning",
+      "description": "Financial analysis and budgeting tools for technology investments"
+    },
+    {
+      "id": "digital-transformation",
+      "name": "Digital Transformation",
+      "description": "Frameworks and assessments for digital initiatives"
+    },
+    {
+      "id": "risk-management",
+      "name": "Risk Management",
+      "description": "Tools for identifying and mitigating technology risks"
+    },
+    {
+      "id": "enterprise-architecture",
+      "name": "Enterprise Architecture",
+      "description": "Resources for architecture planning and documentation"
+    }
+  ]
+}
